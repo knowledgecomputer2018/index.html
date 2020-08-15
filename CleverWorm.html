@@ -77,13 +77,13 @@
 					<p>
 					import pandas as pd</br>
 
-						#SMA AND STOCKASTIC RSI:</br>
+			<span stlye="color:Tomato">	#SMA AND STOCKASTIC RSI:</span></br>
 Numbers=pd.Series([1, 25, 3, 11, 24, 6,4,2,5,23,5,27,12,19,15,18,33,51,21,40])</br>
 lowestlow = pd.Series.rolling(Numbers,window=14,center=False).min()</br>
 print(lowestlow)</br>
 highesthigh = pd.Series.rolling(Numbers, window=14, center=False).max()</br>
 print(highesthigh)</br>
-#Creating the Series</br>
+<span stlye="color:Tomato"> #Creating the Series</span></br>
 result = pd.Series.rolling(Numbers,window=2).mean()</br>
 StoRSI=100*((Numbers-lowestlow)/(highesthigh-lowestlow))</br>
 print(StoRSI)</br>
@@ -93,16 +93,16 @@ D=pd.Series.rolling(K,window=3).mean()</br>
 print(D)</br>
 
 '''</br>
-# Create the Index</br>
-#index = ['Zam Zam', 'Sprite', 'Coke', 'Fanta', 'Dew', 'ThumbsUp']</br>
-# set the index</br>
+<span stlye="color:Tomato"> # Create the Index </span></br>
+<span stlye="color:Tomato"> #index = ['Zam Zam', 'Sprite', 'Coke', 'Fanta', 'Dew', 'ThumbsUp']</span> </br>
+<span stlye="color:Tomato"> # set the index </span> </br>
 sr.index = index #what is different index and index_</br>
-# Print the series</br>
-# Find sum over a window size of 2</br>
-#result = sr.rolling(window=2).mean()</br>
+<span stlye="color:Tomato"> # Print the series </span>	</br>
+<span stlye="color:Tomato"> # Find sum over a window size of 2	</span> </br>
+<span stlye="color:Tomato"> #result = sr.rolling(window=2).mean()</span>	</br>
 '''</br>
 '''</br>
-#result</br>
+<span stlye="color:Tomato"> #result</span>	</br>
 Zam Zam      NaN</br>
 Sprite      17.5</br>
 Coke        14.0</br>
@@ -111,7 +111,7 @@ Dew         17.5</br>
 ThumbsUp    15.0</br>
 dtype: float64</br>
 '''</br>
-#there was no element previous to it so the sum could not be performed.</br>
+<span stlye="color:Tomato"> #there was no element previous to it so the sum could not be performed.</span></br>
 					</p>
 				</div>
 
