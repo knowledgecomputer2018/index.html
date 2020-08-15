@@ -75,43 +75,43 @@
 		<div class="panel panel-default">
 				<div class="panel-body">
 					<p>
-					import pandas as pd
+					import pandas as pd</br>
 
-#SMA AND STOCKASTIC RSI:
-Numbers=pd.Series([1, 25, 3, 11, 24, 6,4,2,5,23,5,27,12,19,15,18,33,51,21,40])
-lowestlow = pd.Series.rolling(Numbers,window=14,center=False).min()
-print(lowestlow)
-highesthigh = pd.Series.rolling(Numbers, window=14, center=False).max()
-print(highesthigh)
-#Creating the Series
-result = pd.Series.rolling(Numbers,window=2).mean()
-StoRSI=100*((Numbers-lowestlow)/(highesthigh-lowestlow))
-print(StoRSI)
-K=pd.Series.rolling(StoRSI,window=3).mean()
-print(K)
-D=pd.Series.rolling(K,window=3).mean()
-print(D)
+						#SMA AND STOCKASTIC RSI:</br>
+Numbers=pd.Series([1, 25, 3, 11, 24, 6,4,2,5,23,5,27,12,19,15,18,33,51,21,40])</br>
+lowestlow = pd.Series.rolling(Numbers,window=14,center=False).min()</br>
+print(lowestlow)</br>
+highesthigh = pd.Series.rolling(Numbers, window=14, center=False).max()</br>
+print(highesthigh)</br>
+#Creating the Series</br>
+result = pd.Series.rolling(Numbers,window=2).mean()</br>
+StoRSI=100*((Numbers-lowestlow)/(highesthigh-lowestlow))</br>
+print(StoRSI)</br>
+K=pd.Series.rolling(StoRSI,window=3).mean()</br>
+print(K)</br>
+D=pd.Series.rolling(K,window=3).mean()</br>
+print(D)</br>
 
-'''
-# Create the Index
-#index = ['Zam Zam', 'Sprite', 'Coke', 'Fanta', 'Dew', 'ThumbsUp']
-# set the index
-sr.index = index #what is different index and index_
-# Print the series
-# Find sum over a window size of 2
-#result = sr.rolling(window=2).mean()
-'''
-'''
-#result
-Zam Zam      NaN
-Sprite      17.5
-Coke        14.0
-Fanta        7.0
-Dew         17.5
-ThumbsUp    15.0
-dtype: float64
-'''
-#there was no element previous to it so the sum could not be performed.
+'''</br>
+# Create the Index</br>
+#index = ['Zam Zam', 'Sprite', 'Coke', 'Fanta', 'Dew', 'ThumbsUp']</br>
+# set the index</br>
+sr.index = index #what is different index and index_</br>
+# Print the series</br>
+# Find sum over a window size of 2</br>
+#result = sr.rolling(window=2).mean()</br>
+'''</br>
+'''</br>
+#result</br>
+Zam Zam      NaN</br>
+Sprite      17.5</br>
+Coke        14.0</br>
+Fanta        7.0</br>
+Dew         17.5</br>
+ThumbsUp    15.0</br>
+dtype: float64</br>
+'''</br>
+#there was no element previous to it so the sum could not be performed.</br>
 					</p>
 				</div>
 
