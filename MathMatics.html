@@ -36,7 +36,47 @@
 	  <div class="col-sm-8" style="direction:ltr;font-size:18px">
 		<div class="panel panel-default">
 				<div class="panel-body">
-					
+					antegral(((e^5logx-e^4logx)/(e^3logx-e^2logx))dx)= </br>
+logx =v then dx=dv*logx</br>
+antegral(((e^5logx-e^4logx)/(e^3logx-e^2logx))dx)=</br>
+antegral((e^5v-e^4v)/((e^3v-e^2v)v) dv)=</br>
+1-antegral((e^5v/(e^3v-e^2v))-(e^4v/(e^3v-e^2v))dx)=</br>
+then:</br>
+---------------</br>
+antegral((e^5v/(e^3v-e^2v)v)dv)-antegral((e^4v/(e^3v-e^2v)v)dx)</br>
+---------------</br>
+part 1:</br>
+antegral((e^5v/(e^3v-e^2v)v)dv)</br>
+e^v=u then e^v *dv=du then du=u dv then dv=du/u</br>
+v=logu</br>
+antegral((e^5v/(e^3v-e^2v)v)dv)=ant((u^5/(u^3-u^2)vu)du)=ant((u^4/(u^3-u^2)logu)du)=</br>
+</br>
+u^4/(u^3-u^2)=u^4/u^2(u-1)=u^2/(u-1)logu</br>
+u-1=p then u=p+1 then dp=du</br>
+logu=log(p+1)</br>
+
+ant(((u^2)/(u-1)logu)du)=ant((((p+1)^2)/(p*log(p+1)))dp)=ant(((p^2+2p+1)/p*log(p+1))dp)=</br>
+ant(((p^2)/p*log(p+1))dp)+ant((2p/p*log(p+1))dp)+ant((1/p*log(p+1))dp)=</br>
+ant((p/log(p+1))dp)+ant((2/log(p+1)dp)+ant((1/p*log(p+1))dp)=</br>
+-----
+1.ant((p/log(p+1))dp)=</br>
+</br>
+2.ant((2/log(p+1)dp)=ant((2+log(p+1)-log(p+1)/log(p+1))dp)=</br>
+ant(((2+log(p+1))/log(p+1))-(log(p+1)/log(p+1))dp)=
+antegral(((2+log(p+1))/log(p+1))dp)-antegral(log(p+1)/log(p+1))dp)
+log(p+1)=u then du=1/(p+1) dp
+ant(2+u/u)
+</br>
+3.ant((1/p*log(p+1))dp)</br>
+</br>
+
+
+-----</br>
+then (p=u-1 ,u=e^v,p=e^v-1,v=logx,p=e^logx-1)</br>
+---------</br>
+---------</br>
+result:</br>
+.....</br>
 			        </div>
 		</div>
 	 </div>
