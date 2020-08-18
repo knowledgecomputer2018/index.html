@@ -1,0 +1,37 @@
+ def _request(self, method, uri, signed, force_params=False, **kwargs):</br>
+</br>
+        # set default requests timeout</br>
+        kwargs['timeout'] = 100</br>
+</br>
+        # add our global requests params</br>
+        if self._requests_params:</br>
+            kwargs.update(self._requests_params)</br>
+</br>
+        data = kwargs.get('data', None)</br>
+        if data and isinstance(data, dict):</br>
+            kwargs['data'] = data</br>
+        if signed:</br>
+            # generate signature</br>
+            kwargs['data']['timestamp'] = int(time.time() * 1000)</br>
+            kwargs['data']['signature'] = self._generate_signature(kwargs['data'])</br>
+</br>
+        # sort get and post params to match signature order</br>
+        if data:</br>
+            # find any requests params passed and apply them</br>
+            if 'requests_params' in kwargs['data']:</br>
+                # merge requests params into kwargs</br>
+                kwargs.update(kwargs['data']['requests_params'])</br>
+                del(kwargs['data']['requests_params'])</br>
+</br>
+            # sort post params</br>
+            kwargs['data'] = self._order_params(kwargs['data'])</br>
+</br>
+        # if get request assign data array to params value for requests lib</br>
+        if data and (method == 'get' or force_params):</br>
+            kwargs['params'] = kwargs['data']</br>
+            del(kwargs['data'])</br>
+        logging.info("kwargs or request End to binance:"+" "+str(kwargs))</br>
+</br>
+        response = getattr(self.session, method)(uri, **kwargs)</br>
+        return self._handle_response(response)</br>
+</br>
