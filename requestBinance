@@ -1,9 +1,43 @@
- def _request(self, method, uri, signed, force_params=False, **kwargs):</br>
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>salam</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+<body style="direction:rtl">
+  
+<!--	<div style="border:2px solid Tomato" id="description">آموزش</div> -->
+	
+	<div class="row">
+		<div class="col-sm-4">
+		
+		</div>
+		
+		<div class="col-sm-4">
+			<h2>ارزدیجیتال و سود از دیدگاه برنامه نویسی</h2> 
+			<h5>مالم سوخت ،ایمانم که نسوخت دوباره می سازم.</h5> 
+		</div>
+		<div class="col-sm-4">
+		</div>
+	</div>
+  <div class="row">
+	  <div class="col-sm-8" style="direction:ltr">
+		<div class="panel panel-default">
+				<div class="panel-body">
+		def _request(self, method, uri, signed, force_params=False, **kwargs):</br>
 </br>
-        # set default requests timeout</br>
+        <p class="text-info"># set default requests timeout</p>
         kwargs['timeout'] = 100</br>
 </br>
-        # add our global requests params</br>
+        <p class="text-info"># add our global requests params</p>
         if self._requests_params:</br>
             kwargs.update(self._requests_params)</br>
 </br>
@@ -11,22 +45,22 @@
         if data and isinstance(data, dict):</br>
             kwargs['data'] = data</br>
         if signed:</br>
-            # generate signature</br>
+            <p class="text-info"># generate signature</p>
             kwargs['data']['timestamp'] = int(time.time() * 1000)</br>
             kwargs['data']['signature'] = self._generate_signature(kwargs['data'])</br>
 </br>
-        # sort get and post params to match signature order</br>
+        <p class="text-info"># sort get and post params to match signature order</p>
         if data:</br>
-            # find any requests params passed and apply them</br>
+            <p class="text-info"># find any requests params passed and apply them</p>
             if 'requests_params' in kwargs['data']:</br>
-                # merge requests params into kwargs</br>
+                <p class="text-info"># merge requests params into kwargs</p>
                 kwargs.update(kwargs['data']['requests_params'])</br>
                 del(kwargs['data']['requests_params'])</br>
 </br>
-            # sort post params</br>
+<p class="text-info"># sort post params</p>
             kwargs['data'] = self._order_params(kwargs['data'])</br>
 </br>
-        # if get request assign data array to params value for requests lib</br>
+ <p class="text-info"># if get request assign data array to params value for requests lib</p>
         if data and (method == 'get' or force_params):</br>
             kwargs['params'] = kwargs['data']</br>
             del(kwargs['data'])</br>
@@ -35,3 +69,61 @@
         response = getattr(self.session, method)(uri, **kwargs)</br>
         return self._handle_response(response)</br>
 </br>
+		</div>
+		</div>
+	 </div>
+  	<div class="col-sm-4">
+	  <ul>
+		<li>
+			
+			<button type="button" class="btn btn-default">آموزش صرافی بایننس</button>
+		</li>
+		
+		<li>
+			<button type="button" class="btn btn-default">آموزش وب سایت تریدینگ ویو</button>
+		</li>
+		
+		<li>
+			 <button type="button" class="btn btn-default">برنامه نویسی پایتون</button>
+		</li>
+		
+		<li>
+			<button type="button" class="btn btn-default">آموزش اندیکاتور استوک استیک آر اس آی</button>
+		</li>
+		
+		<li>
+			<button type="button" class="btn btn-default">آموزش ترید یا معامله به صورت دستی و غیر دستی</button>
+		</li>
+		
+		<li>
+			<button type="button" class="btn btn-default">
+			آموزش اتصال با برنامه نویسی 
+			</button>
+			<ul>
+				<li>بایننس </li>
+				<li>تلگرام</li>
+				<li>سرور</li>
+			</ul>
+		</li>
+		
+		<li>
+				<button type="button" class="btn btn-default">
+			آموزش پایگاه داده + برنامه نویسی  
+			</button>
+			<ul>
+				<li>نوت پد </li>
+				<li>ایکس ام ال</li>
+				<li>اکسل</li>
+				<li>اسکیو ال لایت</li>
+			</ul>
+		</li>
+		  <li>
+			  <h1 style="color:Tomato">معرفی استراتژی برای کسب سود در معامله</h1>
+		  </li>
+	</ul>
+	 
+     </div>
+   </div>
+  </body>
+  </html>
+
