@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"/>
+
+  
+</head>
+<body>
+
+<style type="text/css" rel="style.css"></style>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">بایننس</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">اندیکاتور</button>
+  
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>درخواست</h3>
+  
+  <p>
+  def _request(self, method, uri, signed, force_params=False, **kwargs):</br>
+</br>
+ <p class="text-info">&nbsp;&nbsp;# set default requests timeout</p>
+      &nbsp;&nbsp;  kwargs['timeout'] = 100</br>
+</br>
+        <p class="text-info">&nbsp;&nbsp;# add our global requests params</p>
+        &nbsp;&nbsp;if self._requests_params:</br>
+            &nbsp;&nbsp;kwargs.update(self._requests_params)</br>
+</br>
+        &nbsp;&nbsp;data = kwargs.get('data', None)</br>
+        &nbsp;&nbsp;if data and isinstance(data, dict):</br>
+            &nbsp;&nbsp;kwargs['data'] = data</br>
+        &nbsp;&nbsp;if signed:</br>
+            <p class="text-info">&nbsp;&nbsp;# generate signature</p>
+            &nbsp;&nbsp;kwargs['data']['timestamp'] = int(time.time() * 1000)</br>
+            &nbsp;&nbsp;kwargs['data']['signature'] = self._generate_signature(kwargs['data'])</br>
+</br>
+        <p class="text-info">&nbsp;&nbsp;# sort get and post params to match signature order</p>
+        &nbsp;&nbsp;if data:</br>
+            <p class="text-info">&nbsp;&nbsp;# find any requests params passed and apply them</p>
+            &nbsp;&nbsp;if 'requests_params' in kwargs['data']:</br>
+                <p class="text-info">&nbsp;&nbsp;# merge requests params into kwargs</p>
+                &nbsp;&nbsp;kwargs.update(kwargs['data']['requests_params'])</br>
+                &nbsp;&nbsp;del(kwargs['data']['requests_params'])</br>
+</br>
+<p class="text-info">&nbsp;&nbsp;# sort post params</p>
+            &nbsp;&nbsp;kwargs['data'] = self._order_params(kwargs['data'])</br>
+</br>
+ <p class="text-info">&nbsp;&nbsp;# if get request assign data array to params value for requests lib</p>
+        &nbsp;&nbsp;if data and (method == 'get' or force_params):</br>
+            &nbsp;&nbsp;kwargs['params'] = kwargs['data']</br>
+            &nbsp;&nbsp;del(kwargs['data'])</br>
+        &nbsp;&nbsp;logging.info("kwargs or request End to binance:"+" "+str(kwargs))</br>
+</br>
+        &nbsp;&nbsp;response = getattr(self.session, method)(uri, **kwargs)</br>
+        &nbsp;&nbsp;return self._handle_response(response)</br>
+</br>
+  </p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>اندیکاتور</h3>
+  <p>
+  import pandas as pd</br>
+
+			<p class="text-info">	#SMA AND STOCKASTIC RSI:</p>
+Numbers=pd.Series([1, 25, 3, 11, 24, 6,4,2,5,23,5,27,12,19,15,18,33,51,21,40])</br>
+lowestlow = pd.Series.rolling(Numbers,window=14,center=False).min()</br>
+print(lowestlow)</br>
+highesthigh = pd.Series.rolling(Numbers, window=14, center=False).max()</br>
+print(highesthigh)</br>
+<p class="text-info"> #Creating the Series</p>
+result = pd.Series.rolling(Numbers,window=2).mean()</br>
+StoRSI=100*((Numbers-lowestlow)/(highesthigh-lowestlow))</br>
+print(StoRSI)</br>
+K=pd.Series.rolling(StoRSI,window=3).mean()</br>
+print(K)</br>
+D=pd.Series.rolling(K,window=3).mean()</br>
+print(D)</br>
+
+'''</br>
+<p class="text-info"> # Create the Index </br>
+#index = ['Zam Zam', 'Sprite', 'Coke', 'Fanta', 'Dew', 'ThumbsUp']</br>
+# set the index </p>  </br>
+sr.index = index #what is different index and index_</br>
+<p class="text-info">  # Print the series	</br>
+# Find sum over a window size of 2 </br>
+#result = sr.rolling(window=2).mean()</p>	</br>
+'''</br>
+'''</br>
+<p class="text-info"> #result</p>
+Zam Zam      NaN</br>
+Sprite      17.5</br>
+Coke        14.0</br>
+Fanta        7.0</br>
+Dew         17.5</br>
+ThumbsUp    15.0</br>
+dtype: float64</br>
+'''</br>
+<p class="text-info"> #there was no element previous to it so the sum could not be performed.</p>
+  </p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+  <script >
+  function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+  </script>
