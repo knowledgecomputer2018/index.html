@@ -103,12 +103,14 @@ dtype: float64</br>
 </div>
 <div id="Crypto" class="tabcontent">
 	<h3>رمزنگاری </h3>
+	<p>
 	def _generate_signature(self, data):</br>
 </br>
         &nsordered_data = self._order_params(data)</br>
         query_string = '&'.join(["{}={}".format(d[0], d[1]) for d in ordered_data])</br>
         m = hmac.new(self.API_SECRET.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256)</br>
         return m.hexdigest()</br>
+</p>
 </div>
 </body>
 </html>
