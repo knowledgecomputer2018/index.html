@@ -21,6 +21,7 @@
   <p>
   def _request(self, method, uri, signed, force_params=False, **kwargs):</br>
 </br>
+	<div class="space">
  <p class="text-info">&nbsp;&nbsp;# set default requests timeout</p>
       &nbsp;&nbsp;  kwargs['timeout'] = 100</br>
 </br>
@@ -56,6 +57,7 @@
         &nbsp;&nbsp;response = getattr(self.session, method)(uri, **kwargs)</br>
         &nbsp;&nbsp;return self._handle_response(response)</br>
 </br>
+</div>
   </p>
 </div>
 
@@ -105,11 +107,14 @@ dtype: float64</br>
 	<h3>رمزنگاری </h3>
 	<p>
 	def _generate_signature(self, data):</br>
-</br>
+</br>	
+<div class="space">
         &nsordered_data = self._order_params(data)</br>
         query_string = '&'.join(["{}={}".format(d[0], d[1]) for d in ordered_data])</br>
         m = hmac.new(self.API_SECRET.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256)</br>
         return m.hexdigest()</br>
+</br>
+</div>
 </p>
 </div>
 </body>
