@@ -37,13 +37,13 @@
         if data and isinstance(data, dict):</br>
 	<div class="space">
             kwargs['data'] = data</br>
-            if signed:</br>
-	    <div class="space">
+	</div>
+        if signed:</br>
+	<div class="space">
 		    <p class="text-info">
 		    # generate signature</p>
 		    kwargs['data']['timestamp'] = int(time.time() * 1000)</br>
 		    kwargs['data']['signature'] = self._generate_signature(kwargs['data'])</br>
-	    </div>
 	</div>
 </br>
         <p class="text-info">
