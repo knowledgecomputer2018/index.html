@@ -49,30 +49,33 @@
         <p class="text-info">
 	# sort get and post params to match signature order</p>
         if data:</br>
-	    <span class="space">
+	    <div class="space">
             <p class="text-info">
 	    # find any requests params passed and apply them</p>
             if 'requests_params' in kwargs['data']:</br>
-		<span class="span">
+		<div class="span">
                 <p class="text-info">
 		# merge requests params into kwargs</p>
                 kwargs.update(kwargs['data']['requests_params'])</br>
                 del(kwargs['data']['requests_params'])</br>
-		</span>
+		</div>
 </br>		
 	     <p class="text-info">
 	     # sort post params</p>
              kwargs['data'] = self._order_params(kwargs['data'])</br>
-	    </span>
+	    </div>
 </br>
- <p class="text-info">&nbsp;&nbsp;# if get request assign data array to params value for requests lib</p>
-        &nbsp;&nbsp;if data and (method == 'get' or force_params):</br>
-            &nbsp;&nbsp;kwargs['params'] = kwargs['data']</br>
-            &nbsp;&nbsp;del(kwargs['data'])</br>
-        &nbsp;&nbsp;logging.info("kwargs or request End to binance:"+" "+str(kwargs))</br>
+ 	<p class="text-info">
+	 # if get request assign data array to params value for requests lib</p>
+        if data and (method == 'get' or force_params):</br>
+	<div class="space">
+            kwargs['params'] = kwargs['data']</br>
+            del(kwargs['data'])</br>
+	</div>
+        logging.info("kwargs or request End to binance:"+" "+str(kwargs))</br>
 </br>
-        &nbsp;&nbsp;response = getattr(self.session, method)(uri, **kwargs)</br>
-        &nbsp;&nbsp;return self._handle_response(response)</br>
+        response = getattr(self.session, method)(uri, **kwargs)</br>
+        return self._handle_response(response)</br>
 </br>
 </div>
   </p>
