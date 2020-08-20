@@ -54,3 +54,7 @@ text-align:center;
 .space{
 	padding-left:30px;
 }
+.text-info{
+	font-style:bold;
+	color:red;
+}
