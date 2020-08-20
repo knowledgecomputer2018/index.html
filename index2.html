@@ -35,16 +35,16 @@
 </br>
         data = kwargs.get('data', None)</br>
         if data and isinstance(data, dict):</br>
-	<span class="space">
+	<div class="space">
             kwargs['data'] = data</br>
             if signed:</br>
-	    <span class="space">
+	    <div class="space">
 		    <p class="text-info">
 		    # generate signature</p>
 		    kwargs['data']['timestamp'] = int(time.time() * 1000)</br>
 		    kwargs['data']['signature'] = self._generate_signature(kwargs['data'])</br>
-	    </span>
-	</span>
+	    </div>
+	</div>
 </br>
         <p class="text-info">
 	# sort get and post params to match signature order</p>
