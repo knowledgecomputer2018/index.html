@@ -109,7 +109,7 @@ dtype: float64</br>
 	def _generate_signature(self, data):</br>
 </br>	
 <div class="space">
-        &nsordered_data = self._order_params(data)</br>
+        ordered_data = self._order_params(data)</br>
         query_string = '&'.join(["{}={}".format(d[0], d[1]) for d in ordered_data])</br>
         m = hmac.new(self.API_SECRET.encode('utf-8'), query_string.encode('utf-8'), hashlib.sha256)</br>
         return m.hexdigest()</br>
