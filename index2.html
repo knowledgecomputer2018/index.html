@@ -22,31 +22,48 @@
   def _request(self, method, uri, signed, force_params=False, **kwargs):</br>
 </br>
 	<div class="space">
- <p class="text-info">&nbsp;&nbsp;# set default requests timeout</p>
-      &nbsp;&nbsp;  kwargs['timeout'] = 100</br>
+ 	<p class="text-info">
+	# set default requests timeout</p>
+        kwargs['timeout'] = 100</br>
 </br>
-        <p class="text-info">&nbsp;&nbsp;# add our global requests params</p>
-        &nbsp;&nbsp;if self._requests_params:</br>
-            &nbsp;&nbsp;kwargs.update(self._requests_params)</br>
+        <p class="text-info">
+	# add our global requests params</p>
+        if self._requests_params:</br>
+        <span class="space">
+            kwargs.update(self._requests_params)</br>
+        </span>
 </br>
-        &nbsp;&nbsp;data = kwargs.get('data', None)</br>
-        &nbsp;&nbsp;if data and isinstance(data, dict):</br>
-            &nbsp;&nbsp;kwargs['data'] = data</br>
-        &nbsp;&nbsp;if signed:</br>
-            <p class="text-info">&nbsp;&nbsp;# generate signature</p>
-            &nbsp;&nbsp;kwargs['data']['timestamp'] = int(time.time() * 1000)</br>
-            &nbsp;&nbsp;kwargs['data']['signature'] = self._generate_signature(kwargs['data'])</br>
+        data = kwargs.get('data', None)</br>
+        if data and isinstance(data, dict):</br>
+	<span class="space">
+            kwargs['data'] = data</br>
+            if signed:</br>
+	    <span class="space">
+		    <p class="text-info">
+		    # generate signature</p>
+		    kwargs['data']['timestamp'] = int(time.time() * 1000)</br>
+		    kwargs['data']['signature'] = self._generate_signature(kwargs['data'])</br>
+	    </span>
+	</span>
 </br>
-        <p class="text-info">&nbsp;&nbsp;# sort get and post params to match signature order</p>
-        &nbsp;&nbsp;if data:</br>
-            <p class="text-info">&nbsp;&nbsp;# find any requests params passed and apply them</p>
-            &nbsp;&nbsp;if 'requests_params' in kwargs['data']:</br>
-                <p class="text-info">&nbsp;&nbsp;# merge requests params into kwargs</p>
-                &nbsp;&nbsp;kwargs.update(kwargs['data']['requests_params'])</br>
-                &nbsp;&nbsp;del(kwargs['data']['requests_params'])</br>
-</br>
-<p class="text-info">&nbsp;&nbsp;# sort post params</p>
-            &nbsp;&nbsp;kwargs['data'] = self._order_params(kwargs['data'])</br>
+        <p class="text-info">
+	# sort get and post params to match signature order</p>
+        if data:</br>
+	    <span class="space">
+            <p class="text-info">
+	    # find any requests params passed and apply them</p>
+            if 'requests_params' in kwargs['data']:</br>
+		<span class="span">
+                <p class="text-info">
+		# merge requests params into kwargs</p>
+                kwargs.update(kwargs['data']['requests_params'])</br>
+                del(kwargs['data']['requests_params'])</br>
+		</span>
+</br>		
+	     <p class="text-info">
+	     # sort post params</p>
+             kwargs['data'] = self._order_params(kwargs['data'])</br>
+	    </span>
 </br>
  <p class="text-info">&nbsp;&nbsp;# if get request assign data array to params value for requests lib</p>
         &nbsp;&nbsp;if data and (method == 'get' or force_params):</br>
