@@ -18,7 +18,7 @@ padding: 22px 16px;
 width: 100%;
 border: none;
 outline: none;
-text-align: left;
+text-align: center;
 cursor: pointer;
 transition: 0.3s;
 }
@@ -57,4 +57,7 @@ text-align:center;
 .text-info{
 	font-style:bold;
 	color:red;
+}
+.sub_list{
+	padding-left:20px;
 }
