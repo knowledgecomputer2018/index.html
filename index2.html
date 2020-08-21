@@ -137,6 +137,44 @@ dtype: float64</br>
 </div>
 </p>
 </div>
+<div id="Crypto" class="tabcontent">
+	<h3>ارزیابی پارامتری یا تبدیل پارامترها به لیست </h3>
+	<p>
+	def _order_params(self, data):
+	<div class="space">
+		<div class="text-info">
+			"""Convert params to list with signature as last element</br>
+</br>
+		:param data:</br>
+		:return:</br>
+</br>
+		"""</br>
+		</div>
+		has_signature = False</br>
+		params = []</br>
+		for key, value in data.items():</br>
+		<div class="space">
+		    if key == 'signature':</br>
+			<div class="space">
+			has_signature = True</br>
+			</div>
+		    else:</br>
+			<div class="space">
+			params.append((key, value))</br>
+			</div>
+		</div>
+		<div class="text-info">
+		 # sort parameters by key
+		</div>
+		params.sort(key=itemgetter(0))</br>
+		if has_signature:</br>
+		<div class="space">
+		    params.append(('signature', data['signature']))</br>
+		</div>
+		return params</br>
+	</div>
+	</p>
+</div>
 </body>
 </html>
 
