@@ -63,13 +63,6 @@ text-align:center;
 }
 .text_WorkHome{
 display: block;
-background-color: inherit;
-color: black;
-padding: 22px 16px;
-width: 100%;
-border: none;
-outline: none;
-text-align: center;
-cursor: pointer;
-tr
+text-align: right;
+padding: 10px 0px;
 }
