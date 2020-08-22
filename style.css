@@ -66,6 +66,13 @@ display: block;
 text-align: right;
 padding: 10px 0px;
 }
+h4{
+	margin-top: 0px;
+    margin-bottom: 0px;
+    width: 400px;
+    height: 18px;
+}
+}
 .space_WorkHome{
 	padding-right:10px;
 }
