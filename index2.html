@@ -182,6 +182,35 @@ dtype: float64</br>
 	</div>
 	</p>
 </div>
+
+<div id="Params" class="tabcontent">
+	<h3>
+		ارزیابی پاسخ از سرور بایننس
+	</h3>
+	<p>
+		def _handle_response(self, response):
+		<div class="space">	
+			<div class="text-info">	
+			"""Internal helper for handling API responses from the Binance server.
+			Raises the appropriate exceptions when necessary; otherwise, returns the
+			response.
+			"""
+			</div>
+			if not str(response.status_code).startswith('2'):
+			<div class="space">
+			    raise BinanceAPIException(response)
+			</div>
+			try:
+			<div class="space">
+			    return response.json()
+			</div>
+			except ValueError:
+			<div class="space">
+			    raise BinanceRequestException('Invalid Response: %s' % response.text)
+			</div>
+		</div>
+	</p>
+</div>
 </body>
 </html>
 
