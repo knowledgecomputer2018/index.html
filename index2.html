@@ -214,6 +214,28 @@ dtype: float64</br>
 		</div>
 	</p>
 </div>
+<div id="Responsehandle" class="tabcontent">
+	<h3>
+		خطایابی درخواست
+	</h3>
+	<p>
+    
+    class BinanceRequestException(Exception):
+    <div class="space">		    
+	    def __init__(self, message):
+	    <div class="space">	
+		self.message = message
+	    </div>
+	    
+	    def __str__(self):
+	    <div class="space">	
+		logging.info('BinanceRequestException: %s' % self.message)
+		return 'BinanceRequestException: %s' % self.message
+	    </div>
+
+     </div>	
+    </p>
+</div>
 </body>
 </html>
 
