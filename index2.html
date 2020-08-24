@@ -237,6 +237,48 @@ have not </br> but correct work!!!!
      </div>	
     </p>
 </div>
+APIException
+<div id="RequestException" class="tabcontent">
+	<h3>
+		 خطایابی توابع بایننس یا خطاهای برگشتی از سرور بایننس	</h3>
+	<p>
+    class BinanceAPIException(Exception):
+    <div class="space">
+    	    LISTENKEY_NOT_EXIST = '-1125'
+	    <div class="text-info">
+            #constructor
+	    </div>
+	    def __init__(self, response):
+	    <div class="space">
+		self.status_code = 0
+		try:
+		 <div class="space">
+		    json_res = response.json()
+		 </div>
+		except ValueError:
+		<div class="space">
+		    logging.info('Invalid JSON error message from Binance: {}'.format(response.text))
+		    self.message = 'Invalid JSON error message from Binance: {}'.format(response.text)
+		 </div>
+		else:
+		<div class="space">
+		    self.code = json_res['code']
+		    self.message = json_res['msg']
+		</div>
+		self.status_code = response.status_code
+		self.response = response
+		self.request = getattr(response, 'request', None)
+	    </div>
+	    <div class="text-info">
+             #output
+	    </div>
+	    def __str__(self):  # pragma: no cover
+	    <div class="space">
+		logging.info('APIError(code=%s): %s' % (self.code, self.message))
+		return 'APIError(code=%s): %s' % (self.code, self.message)
+	    </div>    
+	</div>
+	</p>
 </body>
 </html>
 
