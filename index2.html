@@ -242,40 +242,40 @@ have not </br> but correct work!!!!
 	<h3>
 		 خطایابی توابع بایننس یا خطاهای برگشتی از سرور بایننس	</h3>
 	<p>
-    class BinanceAPIException(Exception):
+    class BinanceAPIException(Exception):</br>
     <div class="space">
-    	    LISTENKEY_NOT_EXIST = '-1125'
+    	    LISTENKEY_NOT_EXIST = '-1125'</br>
 	    <div class="text-info">
-            #constructor
+            #constructor</br>
 	    </div>
-	    def __init__(self, response):
+	    def __init__(self, response):</br>
 	    <div class="space">
-		self.status_code = 0
-		try:
+		self.status_code = 0</br>
+		try:</br>
 		 <div class="space">
-		    json_res = response.json()
+		    json_res = response.json()</br>
 		 </div>
-		except ValueError:
+		except ValueError:</br>
 		<div class="space">
-		    logging.info('Invalid JSON error message from Binance: {}'.format(response.text))
-		    self.message = 'Invalid JSON error message from Binance: {}'.format(response.text)
+		    logging.info('Invalid JSON error message from Binance: {}'.format(response.text))</br>
+		    self.message = 'Invalid JSON error message from Binance: {}'.format(response.text)</br>
 		 </div>
-		else:
+		else:</br>
 		<div class="space">
-		    self.code = json_res['code']
-		    self.message = json_res['msg']
+		    self.code = json_res['code']</br>
+		    self.message = json_res['msg']</br>
 		</div>
-		self.status_code = response.status_code
-		self.response = response
-		self.request = getattr(response, 'request', None)
+		self.status_code = response.status_code</br>
+		self.response = response</br>
+		self.request = getattr(response, 'request', None)</br>
 	    </div>
 	    <div class="text-info">
-             #output
+             #output</br>
 	    </div>
-	    def __str__(self):  # pragma: no cover
+	    def __str__(self):  # pragma: no cover</br>
 	    <div class="space">
-		logging.info('APIError(code=%s): %s' % (self.code, self.message))
-		return 'APIError(code=%s): %s' % (self.code, self.message)
+		logging.info('APIError(code=%s): %s' % (self.code, self.message))</br>
+		return 'APIError(code=%s): %s' % (self.code, self.message)</br>
 	    </div>    
 	</div>
 	</p>
