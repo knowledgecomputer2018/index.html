@@ -19,15 +19,14 @@
      <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'get')">ایجاد درخواست</button>
      <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'request_api')">درخواست به توابع بایننس</button>
      <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'create_api_uri')">ایجاد مسیر درخواست</button>
-      <button class="tablinks " onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
-   
   <button class="tablinks" onclick="openCity(event, 'Paris')">اندیکاتور</button>
 <button class="tablinks" onclick="openCity(event, 'test')">  
 	<h1 style="color:Tomato">معرفی استراتژی برای کسب سود در معامله</h1>
 </button>
   
 </div>
-
+<!----------------------------------->
+<!----------------------------------->
 <div id="London" class="tabcontent">
   <h3>درخواست</h3>
   
@@ -93,7 +92,7 @@
 </div>
   </p>
 </div>
-
+<!----------------------------------->
 <div id="Paris" class="tabcontent">
   <h3>اندیکاتور</h3>
   <p>
@@ -150,6 +149,7 @@ dtype: float64</br>
 </div>
 </p>
 </div>
+<!----------------------------------->
 <div id="Params" class="tabcontent">
 	<h3>
 		ارزیابی پارامترها یا تبدیل پارامترها به لیست 
@@ -190,7 +190,7 @@ dtype: float64</br>
 	</div>
 	</p>
 </div>
-
+<!----------------------------------->
 <div id="Responsehandle" class="tabcontent">
 	<h3>
 		ارزیابی پاسخ از سرور بایننس
@@ -219,6 +219,7 @@ dtype: float64</br>
 		</div>
 	</p>
 </div>
+<!----------------------------------->
 <div id="RequestException" class="tabcontent">
 	<h3>
 		 خطایابی درخواست یا خطاهای برگشتی از سرور بایننس	</h3>
@@ -242,7 +243,7 @@ have not </br> but correct work!!!!
      </div>	
     </p>
 </div>
-
+<!----------------------------------->
 <div id="APIException" class="tabcontent">
 	<h3>
 		 خطایابی توابع بایننس یا خطاهای برگشتی از سرور بایننس	
@@ -297,7 +298,8 @@ have not </br> but correct work!!!!
 	 <div class="space">
 		<div class="text-info">
 
-		"""Test connectivity to the Rest API.</br>
+		"""</br>
+		Test connectivity to the Rest API.</br>
 		:returns: Empty array</br>
 
 		.. code-block:: python</br>
@@ -321,7 +323,7 @@ have not </br> but correct work!!!!
 	def _get(self, path, signed=False, version=PUBLIC_API_VERSION, **kwargs):</br>
 	<div class="space">
 		<div class="text-info">
-
+		"""
 		'get':,</br>
 		 path:,</br>
 		 signed:,</br>
@@ -345,7 +347,7 @@ have not </br> but correct work!!!!
 	def _request_api(self, method, path, signed=False, version=PUBLIC_API_VERSION, **kwargs):</br>
 	<div class="space">
 		<div class="text-info">
-
+		"""
 		self:,</br>
 		method:,</br>
 		path:,</br>
@@ -371,7 +373,7 @@ have not </br> but correct work!!!!
 		def _create_api_uri(self, path, signed=True, version=PUBLIC_API_VERSION):</br>
 	<div class="space">
 		<div class="text-info">
-
+		"""
 		self:,</br>
 		path:,</br>
 		signed=True:,</br>
