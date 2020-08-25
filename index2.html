@@ -297,18 +297,18 @@ have not </br> but correct work!!!!
 	<div class="space>
 		<div class="text-info">
 
-		"""Test connectivity to the Rest API.
-		:returns: Empty array
+		"""Test connectivity to the Rest API.</br>
+		:returns: Empty array</br>
 
-		.. code-block:: python
-
-		    {}
-
-		:raises: BinanceResponseException, BinanceAPIException
-
-	        """
+		.. code-block:: python</br>
+</br>
+		    {}</br>
+</br>
+		:raises: BinanceResponseException, BinanceAPIException</br>
+</br>
+	        """</br>
 		</div>
-        	return self._get('ping')
+        	return self._get('ping')</br>
 	</div>
 	</p>
 </div>
@@ -328,9 +328,10 @@ have not </br> but correct work!!!!
 		 version:,</br>
 		 **kwargs:</br>
 
-	        """
+	        """</br>
 		</div>
         	return self._request_api('get', path, signed, version, **kwargs)</br>
+</br>
 	</div>
 	</p>
 </div>
@@ -356,6 +357,7 @@ have not </br> but correct work!!!!
 		</div>
         	uri = self._create_api_uri(path, signed, version)</br>
         	return self._request(method, uri, signed, **kwargs)</br>
+</br>
 	</div>
 	</p>
 </div>
@@ -379,6 +381,7 @@ have not </br> but correct work!!!!
 		</div> 
 		v = self.PRIVATE_API_VERSION if signed else version</br>
         	return self.API_URL + '/' + v + '/' + path</br>
+	</br>
 	</div>
 	</p>
 </div>
