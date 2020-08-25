@@ -10,12 +10,17 @@
 <style type="text/css" rel="style.css"></style>
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London')">بایننس</button>
-  <button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'Crypto')">رمزنگاری</button>
-  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Params')">تبدیل پارامتر ها به لیست</button>
-  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Responsehandle')">ارزیابی پاسخ درخواست</button>
-  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'RequestException')">خطایابی درخواست</button>
-  <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'APIException')">خطایابی توابع بایننس</button>
+   <button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'Crypto')">رمزنگاری</button>
+   <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Params')">تبدیل پارامتر ها به لیست</button>
+   <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Responsehandle')">ارزیابی پاسخ درخواست</button>
+   <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'RequestException')">خطایابی درخواست</button>
+   <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'APIException')">خطایابی توابع بایننس</button>
   <button class="tablinks " onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
+     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'get')">ایجاد درخواست</button>
+     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'request_api')">درخواست به توابع بایننس</button>
+     <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'create_api_uri')">ایجاد مسیر درخواست</button>
+      <button class="tablinks " onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
+   
   <button class="tablinks" onclick="openCity(event, 'Paris')">اندیکاتور</button>
 <button class="tablinks" onclick="openCity(event, 'test')">  
 	<h1 style="color:Tomato">معرفی استراتژی برای کسب سود در معامله</h1>
@@ -282,12 +287,12 @@ have not </br> but correct work!!!!
 	</div>
 	</p>
 </div>
+<!---------------------------------->
 <div id="Ping" class="tabcontent">
 	<h3>
 		 تشخیص این که آیا به وب سایت یا سرور بایننس یا به توابع بایننس متصل هستیم یانه؟	
 	</h3>
-	<p>
-		
+	<p>		
 	 def ping(self):
 	<div class="space>
 		<div class="text-info">
@@ -304,6 +309,76 @@ have not </br> but correct work!!!!
 	        """
 		</div>
         	return self._get('ping')
+	</div>
+	</p>
+</div>
+<!----------------------------------->
+<div id="get" class="tabcontent">
+	<h3>
+		 ایجاد درخواست
+	</h3>
+	<p>		
+	def _get(self, path, signed=False, version=PUBLIC_API_VERSION, **kwargs):</br>
+	<div class="space>
+		<div class="text-info">
+
+		'get':,</br>
+		 path:,</br>
+		 signed:,</br>
+		 version:,</br>
+		 **kwargs:</br>
+
+	        """
+		</div>
+        	return self._request_api('get', path, signed, version, **kwargs)</br>
+	</div>
+	</p>
+</div>
+<!----------------------------------->
+
+<div id="_request_api" class="tabcontent">
+	<h3>
+		یا درخواست به مسیر درخواست به توابع بایننس
+	</h3>
+	<p>		
+	def _request_api(self, method, path, signed=False, version=PUBLIC_API_VERSION, **kwargs):</br>
+	<div class="space>
+		<div class="text-info">
+
+		self:,</br>
+		method:,</br>
+		path:,</br>
+		signed=False:,</br>
+                version=PUBLIC_API_VERSION:,</br>
+		**kwargs:</br>
+
+	        """
+		</div>
+        	uri = self._create_api_uri(path, signed, version)</br>
+        	return self._request(method, uri, signed, **kwargs)</br>
+	</div>
+	</p>
+</div>
+<!----------------------------------->
+
+<div id="_request_api" class="tabcontent">
+	<h3>
+		ایجاد مسیر درخواست
+	</h3>
+	<p>		
+		def _create_api_uri(self, path, signed=True, version=PUBLIC_API_VERSION):</br>
+	<div class="space>
+		<div class="text-info">
+
+		self:,</br>
+		path:,</br>
+		signed=True:,</br>
+                version=PUBLIC_API_VERSION:,</br>
+
+	        """
+		</div> 
+		v = self.PRIVATE_API_VERSION if signed else version</br>
+        	return self.API_URL + '/' + v + '/' + path</br>
 	</div>
 	</p>
 </div>
