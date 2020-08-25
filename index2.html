@@ -240,7 +240,8 @@ have not </br> but correct work!!!!
 
 <div id="APIException" class="tabcontent">
 	<h3>
-		 خطایابی توابع بایننس یا خطاهای برگشتی از سرور بایننس	</h3>
+		 خطایابی توابع بایننس یا خطاهای برگشتی از سرور بایننس	
+	</h3>
 	<p>
     class BinanceAPIException(Exception):</br>
     <div class="space">
@@ -280,6 +281,32 @@ have not </br> but correct work!!!!
 	</br>
 	</div>
 	</p>
+</div>
+<div id="Ping" class="tabcontent">
+	<h3>
+		 تشخیص این که آیا به وب سایت یا سرور بایننس یا به توابع بایننس متصل هستیم یانه؟	
+	</h3>
+	<p>
+		
+	 def ping(self):
+	<div class="space>
+		<div class="text-info">
+
+		"""Test connectivity to the Rest API.
+		:returns: Empty array
+
+		.. code-block:: python
+
+		    {}
+
+		:raises: BinanceResponseException, BinanceAPIException
+
+	        """
+		</div>
+        	return self._get('ping')
+	</div>
+	</p>
+</div>
 </body>
 </html>
 
