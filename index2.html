@@ -422,9 +422,10 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 <!----------------------------------->
 <div id="Times" class="tabcontent">
 	<h3>
+		
 	</h3>
 	<p>		
-		
+	Serious trading is about timing.	
 	</p>
 </br>
 </div>
@@ -442,9 +443,45 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 
 <div id="ConvertTimeToMili" class="tabcontent">
 	<h3>
+		تبدیل تاریخ وزمان به میلی ثانیه
 	</h3>
-	<p>		
-		
+	<p>
+	
+	def date_to_milliseconds(date_str):
+	<div class="space">
+	   <div class="text-info">
+		"""</br>
+	    Convert UTC date to milliseconds</br>
+</br>
+	    If using offset strings add "UTC" to date string e.g. "now UTC", "11 hours ago UTC"</br>
+</br>
+	    See dateparse docs for formats http://dateparser.readthedocs.io/en/latest/</br>
+</br>
+	    :param date_str: date in readable format, i.e. "January 01, 2018", "11 hours ago UTC", "now UTC"</br>
+	    :type date_str: str</br>
+	    """</br>
+	    </div>
+	    <div class="text-info">
+	    # get epoch value in UTC</br>
+	    </div>
+	    epoch = datetime.utcfromtimestamp(0).replace(tzinfo=pytz.utc)</br>
+	    <div class="text-info">
+	    # parse our date string</br>
+	    d = dateparser.parse(date_str)</br>
+	    </div>
+ 	    <div class="text-info">
+	    # if the date is not timezone aware apply UTC timezone</br>
+	    </div>
+	    if d.tzinfo is None or d.tzinfo.utcoffset(d) is None:</br>
+		<div class="space">
+		d = d.replace(tzinfo=pytz.utc)</br>
+		</div>
+	   </br>
+	    <div class="text-info">
+	    # return the difference in time</br>
+	    </div>
+	    return int((d - epoch).total_seconds() * 1000.0)</br>
+	</div>	
 	</p>
 </br>
 </div>
