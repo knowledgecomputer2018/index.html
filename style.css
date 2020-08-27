@@ -35,7 +35,7 @@ background-color: #ccc;
 
 /* Style the tab content */
 .tabcontent {
-float: right;
+#float: right;
 padding: 0px 50px;
 border: 50px solid #ccc;
 width: 70%;
