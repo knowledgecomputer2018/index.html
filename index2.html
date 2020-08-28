@@ -24,6 +24,7 @@
      <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'Consts')">ثابت ها</button>
   <button class="tablinks " style="font-weight:bold"  onclick="openCity(event, 'Times')"> تاریخ  و  ساعت در بایننس </button>
 	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'TypesTime')">انواع زمان ها </button>
+	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'epoch')">epoch </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timestamp')">timestamp </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timezone')">timezone </button>
 		<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'UTC')">UTC </button>
@@ -518,8 +519,6 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 </br>
 </div>
 <!----------------------------------->
-
-
 <div id="diff" class="tabcontent">
 	<h3>
 	</h3>
@@ -529,17 +528,15 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 </br>
 </div>
 <!----------------------------------->
-
-
-
 <div id="now" class="tabcontent">
 	<h3>
 		تاریخ و ساعت (زمان) حال به میلی ثانیه
 	</h3>
 	<p>		
-		import time 
-		
+		import time </br>
+</br>		
 		time .time()
+</br>
 	</p>
 </br>
 </div>
@@ -647,7 +644,7 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 </br>
 </div>
 <!----------------------------------->
-<div id="timestamp" class="tabcontent">
+<div id="epoch" class="tabcontent">
 	<h3>
 		epoch
 	</h3>
