@@ -27,7 +27,9 @@
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'epoch')"> epoch </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timestamp')">timestamp </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timezone')">timezone </button>
-		<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'UTC')">UTC </button>
+	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'UTC')">UTC </button>
+	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'TimezoneToUTC')">convert TimezoneToUTC</button>
+	
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timeInforce')">timeInforce </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeSecurity')">امنیت زمان </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeServer')">تاریخ وزمان سرور بایننس </button>
@@ -698,6 +700,7 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 		epoch 2000.0 would begin at 1200 UTC on January 1, 2000.</br>
 	</p>
 </br>
+<a href="https://searchdatacenter.techtarget.com/definition/epoch">link "epoch"</a>
 </div>
 <!----------------------------------->
 <div id="timestamp" class="tabcontent">
@@ -714,10 +717,25 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 	<h3>
 		زمان منطقه
 	</h3>
-	<p>		
-		
-	</p>
+	<p>
+<h4>The importance of timezones in applications</h4></br>
+Once you've heard what Tom says, I think it gets pretty clear that a timestamp without any timezone attached does not give any useful information. It should be considered</br>
+irrelevant and useless. Without the necessary context given by the timezone, you cannot infer what point in time your application is really referring to.</br>
+That means your application should never handle timestamps with no timezone information. It should try to guess or raises an error if no timezone is provided in any input.</br>
 </br>
+Of course, you can infer that having no timezone information means UTC. This sounds very handy, but can also be dangerous in certain applications or language–such as Python, as we'll see.</br>
+</br>
+Indeed, in certain applications, converting timestamps to UTC and losing the timezone information is a terrible idea.</br>
+Imagine that a user create a recurring event every Wednesday at 10:00 in its local timezone, say CET. If you convert that to UTC, the event will end up being stored as every Wednesday at 09:00.</br>
+</br>
+Now imagine that the CET timezone switches from UTC+01:00 to UTC+02:00: your application will compute that the event starts at 11:00 CET every Wednesday. </br>
+Which is wrong, because as the user told you, the event starts at 10:00 CET, whatever the definition of CET is. Not at 11:00 CET. So CET means CET, not necessarily UTC+1.</br>
+</br>
+As for endpoints like REST API, a thing I daily deal with, all timestamps should include a timezone information. </br>
+It's nearly impossible to know what timezone the timestamps are in otherwise: UTC? Server local? User local? No way to know.</br>
+</p>
+</br>
+<a href="https://julien.danjou.info/python-and-timezones/">link "The importance of timezones in applications"</a>
 </div>
 <!----------------------------------->
 <div id="UTC" class="tabcontent">
