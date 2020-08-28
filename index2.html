@@ -28,7 +28,8 @@
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timezone')">timezone </button>
 		<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'UTC')">UTC </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timeInforce')">timeInforce </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeSecurity')">TimeSecurity </button>
+	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeSecurity')">امنیت زمان </button>
+	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeServer')">تاریخ وزمان سرور بایننس </button>
 	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'ConvertTimeToMili')">تبدیل تاریخ و ساعت یا زمان به میلی ثانیه</button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'ConvertMilliToTime')"> تبدیل میلی ثانیه به تاریخ و ساعت یا زمان </button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'DiffDateTime')">تفاضل دو تاریخ </button>
@@ -519,6 +520,30 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 <!----------------------------------->
 
 
+<div id="diff" class="tabcontent">
+	<h3>
+	</h3>
+	<p>		
+		
+	</p>
+</br>
+</div>
+<!----------------------------------->
+
+
+
+<div id="now" class="tabcontent">
+	<h3>
+		تاریخ و ساعت (زمان) حال به میلی ثانیه
+	</h3>
+	<p>		
+		import time 
+		
+		time .time()
+	</p>
+</br>
+</div>
+<!----------------------------------->
 <div id="Candles" class="tabcontent">
 	<h3>
 	</h3>
@@ -624,9 +649,40 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 <!----------------------------------->
 <div id="timestamp" class="tabcontent">
 	<h3>
+		epoch
 	</h3>
 	<p>		
-		
+		In a computing context, an epoch is the date and time relative to which a computer's clock and timestamp values are determined.</br>
+		The epoch traditionally corresponds to 0 hours, 0 minutes, and 0 seconds (00:00:00) Coordinated Universal Time (UTC) on a specific date,</br>
+		which varies from system to system. Most versions of Unix, for example, use January 1, 1970 as the epoch date; Windows uses January 1, 1601; </br>
+		Macintosh systems use January 1, 1904, and Digital Equipment Corporation's Virtual Memory System (VMS) uses November 17, 1858.</br>
+</br>
+		The date and time in a computer is determined according to the number of seconds or clock ticks that have elapsed</br>
+		since the defined epoch for that computer or platform. </br>
+		This number is limited by the word length, and also by the number of clock ticks per second. In a 32-bit computer with 1 tick per second,</br>
+		for example, the clock will wrap around (that is, reach its maximum numerical time) on January 18, 2038. This is not likely to be a problem, </br>
+		because most computers are obsolete after a few years,</br>
+		and longer word lengths and/or new epochs will likely be defined before 2038.</br>
+		However, in a computer with 16 ticks per second, wrap-around can occur well within the useful lifetime of the machine.</br>
+</br>
+	</p>
+	<p>
+		Other ways "epoch" is used: In geology, an epoch is a period of time of variable length that is a portion of a period, </br>
+		which in turn is a fractional part of an era. We are currently in the Holocene epoch, which is part of the Quaternary period, </br>
+		which in turn is part of the Cenozoic era. In prediction of tides, an epoch is a period of 19 years, representing one complete cycle of</br>
+		all possible alignments of the sun and the moon. In astronomy, an epoch is the point in time where a calendar, or a defined time frame</br>
+		within a calendar, is considered to begin. In 1984, the International Astronomical Union decided that</br>
+		epoch 2000.0 would begin at 1200 UTC on January 1, 2000.</br>
+	</p>
+</br>
+</div>
+<!----------------------------------->
+<div id="timestamp" class="tabcontent">
+	<h3>
+		timestamp
+	</h3>
+	<p>		
+		A timestamp is the current time of an event that is recorded by a computer. Through mechanisms such as the Network.
 	</p>
 </br>
 </div>
@@ -660,6 +716,17 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 <!----------------------------------->
 <div id="TimeSecurity" class="tabcontent">
 	<h3>
+		چک کردن تاریخ وساعت برای برقراری امنیت در ارتباط با سرور بایننس 
+	</h3>
+	<p>		
+		
+	</p>
+</br>
+</div>
+<!----------------------------------->
+<div id="TimeServer" class="tabcontent">
+	<h3>
+		زمان برگشتی از سرور بایننس یا تاریخ و ساعت سرور بایننس
 	</h3>
 	<p>		
 		
