@@ -499,8 +499,18 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 <!----------------------------------->
 <div id="ConvertMilliToTime" class="tabcontent">
 	<h3>
+		تبدیل میلی ثانیه به تاریخ و ساعت
 	</h3>
 	<p>		
+	def milliseconds_to_date(self,milliseconds):
+	<div class="space">
+		s = milliseconds/ 1000.0
+		dte = datetime.fromtimestamp(s).strftime('%Y-%m-%d %H:%M:%S.%f')
+		<div class="text-info">
+		#return dte.split() #return date and time
+		</div>
+		return dte
+	</div>
 		
 	</p>
 </br>
