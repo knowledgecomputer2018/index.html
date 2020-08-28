@@ -23,12 +23,12 @@
      <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'create_api_uri')">ایجاد مسیر درخواست</button>
      <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'Consts')">ثابت ها</button>
   <button class="tablinks " style="font-weight:bold"  onclick="openCity(event, 'Times')"> تاریخ  و  ساعت در بایننس </button>
-	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'TypesTime')">انواع زمان ها </button>
+	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'TypesTimes')">انواع زمان ها </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'epoch')"> epoch </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timestamp')">timestamp </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timezone')">timezone </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'UTC')">UTC </button>
-	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'TimezoneToUTC')">convert TimezoneToUTC</button>
+	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimezoneToUTC')">TimezoneToUTC</button>
 	
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timeInforce')">timeInforce </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeSecurity')">امنیت زمان </button>
@@ -444,10 +444,24 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 </div>
 <!----------------------------------->
 
-<div id="TypesTimee" class="tabcontent">
+<div id="TypesTimes" class="tabcontent">
 	<h3>
+		انواع زمان ها
 	</h3>
-	<p>		
+	<p>
+	    import datetime</br>
+	    #...........................</br>
+	    
+	    epoch = datetime.utcfromtimestamp(0).replace(tzinfo=pytz.utc)</br>
+            UTC=datetime.utcnow()</br>
+	    utc_timestamp = UTC.timestamp()</br>
+            Local=datetime.now()</br>
+	    
+	    print(UTC)</br>
+	    print(epoch)</br>
+	    print(utc_timestamp)</br>
+	    print(Local)</br>
+	    
 		
 	</p>
 </br>
