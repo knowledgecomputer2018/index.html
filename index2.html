@@ -11,7 +11,7 @@
 	<h5 style="margin-top: 0px;margin-bottom: 0px;text-align: center;">به نام هستی بخش دلها </h5>
 <div class="tab">
   
-  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'London')">بایننس</button>
+  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'request')">بایننس</button>
    <button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'Crypto')">رمزنگاری</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Params')">تبدیل پارامتر ها به لیست</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Responsehandle')">ارزیابی پاسخ درخواست</button>
@@ -31,11 +31,14 @@
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimezoneToUTC')">TimezoneToUTC</button>
 	
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timeInforce')">timeInforce </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeSecurity')">امنیت زمان </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeServer')">تاریخ وزمان سرور بایننس </button>
+	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeSecurity')">امنیت زمان </button>
 	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'ConvertTimeToMili')">تبدیل تاریخ و ساعت یا زمان به میلی ثانیه</button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'ConvertMilliToTime')"> تبدیل میلی ثانیه به تاریخ و ساعت یا زمان </button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'DiffDateTime')">تفاضل دو تاریخ </button>
+	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'AdvanceDiff')">
+		تفاضل دوتاریخ پیشرفته
+	</button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'now')">زمان حال تاریخ و ساعت </button>
 	
   <button class="tablinks " style="font-weight:bold"  onclick="openCity(event, 'Candles')">کندل </button>
@@ -57,7 +60,7 @@
   
 </div>
 <!----------------------------------->
-<div id="London" class="tabcontent">
+<div id="request" class="tabcontent">
   <h3>درخواست</h3>
   
   <p>
@@ -362,7 +365,7 @@ have not </br> but correct work!!!!
 
 	        """</br>
 		</div>
-        	return self._request_api('get', path, signed, version, **kwargs)</br>
+        	return self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'request_api')">_request_api('get', path, signed, version, **kwargs)</button></br>
 </br>
 	</div>
 	</p>
@@ -387,8 +390,8 @@ have not </br> but correct work!!!!
 
 	        """
 		</div>
-        	uri = self._create_api_uri(path, signed, version)</br>
-        	return self._request(method, uri, signed, **kwargs)</br>
+        	uri = self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'create_api_uri')">_create_api_uri(path, signed, version)</button></br>
+        	return self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'request')">_request(method, uri, signed, **kwargs)</button></br>
 </br>
 	</div>
 	</p>
@@ -437,8 +440,10 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 	<h3>
 		
 	</h3>
-	<p>		
-	Serious trading is about timing.	
+	<p>
+	Serious trading is about timing.Networks can be unstable and unreliable, which can lead to requests taking varying</br>
+	amounts of time to reach the servers. With recvWindow,you can specify that the request must be processed within</br>
+	 a certain number of milliseconds or be rejected by the server.</br>
 	</p>
 </br>
 </div>
@@ -450,19 +455,21 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 	</h3>
 	<p>
 	    import datetime</br>
-	    #...........................</br>
+	    </br>
 	    
 	    epoch = datetime.utcfromtimestamp(0).replace(tzinfo=pytz.utc)</br>
             UTC=datetime.utcnow()</br>
 	    utc_timestamp = UTC.timestamp()</br>
             Local=datetime.now()</br>
-	    
+		servertime=self.servertime=int(self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'TimeServer')">get_server_time()['serverTime'])</button></br>
+	     </br>
 	    print(UTC)</br>
 	    print(epoch)</br>
 	    print(utc_timestamp)</br>
 	    print(Local)</br>
+		print(servertime)</br>
 	    
-		
+ </br>
 	</p>
 </br>
 </div>
@@ -559,14 +566,247 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 </br>
 </div>
 <!----------------------------------->
-<div id="diff" class="tabcontent">
+<div id="DiffDateTime" class="tabcontent">
 	<h3>
+		 تفاضل یا تفاوت دو تاریخ وساعت یا زمان
 	</h3>
-	<p>		
+	<p>
+		from datetime import datetime</br>
+		</br>
+		<div class="text-info">
+			#method1 int to datetime
+		</div>
+		def diff():
+		<div class="space">
+
+			d1 = datetime(2020, 8, 29, 21, 52)</br>
+			d2 = datetime(2020, 8, 29, 22, 52)</br>
+		</br>
+			if d2 < d1:</br>
+			<div class="space">
+				d2 += timedelta(days=1)</br>
+	        </div>
+			print(d2-d1)</br>
+		</div>
+</br>
 		
+	</p>
+	<p>
+
+		<div class="text-info">
+		#method2 :str to datetime
+		</div>
+		def diff2():
+		<div class="space">
+			d1 = datetime.strptime('2020-8-29 21:52:00',"%Y-%m-%d %H:%M:%S")</br>
+			d2 = datetime.strptime('2020-8-29 22:52:00',"%Y-%m-%d %H:%M:%S")</br>
+
+	</br>
+			if d2 < d1:</br>
+			<div class="space">
+				d2 += timedelta(days=1)</br>
+	        </div>
+			print(d2-d1)</br>
+		</div>
+</br>
+	</p>
+	<p>
+		<div class="text-info">
+		#method3 :str_datetime split to date and time  then diff time and date
+		</div>
+		def between_two_time():
+		<div class="space">
+			str_datetime1='2020-8-29 21:52:00'</br>
+			str_datetime2='2020-8-29 22:52:00'</br>
+</br>
+			dt1,tm1=(str_datatime1).split()</br>
+			dt2,tm2=(str_datatime2).split()</br>
+</br>
+			<div class="text-info">
+			#format time
+			</div>
+			FMT = '%H:%M:%S.%f'</br>
+			<div class="text-info">
+			#tdelta=diff time</br>
+			</div>
+			tdelta = datetime.strptime(tm2, FMT) - datetime.strptime(tm, FMT)</br>
+			value_min=(tdelta.total_seconds())//60</br>
+</br>
+			if tdelta.days < 0:</br>
+			<div class="space">
+				tdelta = timedelta(days=0,seconds=tdelta.seconds, microseconds=tdelta.microseconds)</br>
+				value_min=(tdelta.total_seconds())//60</br>
+			</div>
+			return value_min,tdelta</br>
+         </div>
+	</p>
+</br>
+
+</div>
+<!----------------------------------->
+<div id="AdvanceDiff" class="tabcontent">
+	<h3>
+		تفاضل زمان یا تاریخ و ساعت پیشرفته با پاندا
+	</h3>
+	<p>
+		mport pandas as pd</br>
+		from pandas import Timedelta</br>
+</br>
+d = {</br>
+    "CallDate": [</br>
+        "1/8/2009",</br>
+        "1/11/2009",</br>
+        "1/9/2009",</br>
+        "1/11/2009",</br>
+        "1/16/2009",</br>
+        "1/17/2009",</br>
+        "1/19/2009",</br>
+        "1/20/2009",</br>
+        "1/20/2009",</br>
+        "1/23/2009",</br>
+        "1/30/2009"</br>
+    ],</br>
+    "BeginningTime": [</br>
+        "1900-01-01 07:49:00",</br>
+        "1900-01-01 14:37:00",</br>
+        "1900-01-01 09:29:00",</br>
+        "1900-01-01 09:20:00",</br>
+        "1900-01-01 15:11:00",</br>
+        "1900-01-01 22:52:00",</br>
+        "1900-01-01 05:48:00",</br>
+        "1900-01-01 23:46:00",</br>
+        "1900-01-01 21:29:00",</br>
+        "1900-01-01 07:33:00",</br>
+        "1900-01-01 19:33:00"</br>
+    ],</br>
+    "EndingTime": [</br>
+        "1900-01-01 08:19:00",</br>
+        "1900-01-01 14:59:00",</br>
+        "1900-01-01 09:56:00",</br>
+        "1900-01-01 10:13:00",</br>
+        "1900-01-01 15:50:00",</br>
+        "1900-01-01 23:26:00",</br>
+        "1900-01-01 06:32:00",</br>
+        "1900-01-01 00:21:00",</br>
+        "1900-01-01 22:08:00",</br>
+        "1900-01-01 07:55:00",</br>
+        "1900-01-01 20:01:00"</br>
+    ]</br>
+}</br>
+</br>
+df = pd.DataFrame(data=d)</br>
+</br>
+df['BeginningTime']=pd.to_datetime(df['BeginningTime'], format="%Y-%m-%d %H:%M:%S")</br>
+df['EndingTime']=pd.to_datetime(df['EndingTime'], format="%Y-%m-%d %H:%M:%S")</br>
+</br>
+def interval(x):</br>
+	<div class="space">
+    if x['EndingTime'] < x['BeginningTime']:</br>
+		<div class="space">
+        x['EndingTime'] += Timedelta(days=1)</br>
+			</div>
+    return x['EndingTime'] - x['BeginningTime']</br>
+	</div>
+</br>
+df['Interval'] = df.apply(interval, axis=1)</br>
+	</br></br>
+<div class="text-info">
+In [2]: df</br>
+Out[2]:</br>
+<table style="width:100%">
+  <tr>
+	  <th></th>
+    <th>BeginningTime</th>
+    <th>CallDate</th>
+	  <th>EndingTime</th>
+	  <th>Interval</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1900-01-01 07:49:00</td>
+    <td>1/8/2009 </td>
+	  <td>1900-01-01 08:19:00</td>
+	  <td>00:30:00</td>
+  </tr>
+	 <tr>
+    <td>1</td>
+    <td>1900-01-01 14:37:00</td>
+    <td> 1/11/2009</td>
+	  <td>1900-01-01 14:59:00</td>
+	  <td>00:22:00</td>
+  </tr>
+	 <tr>
+    <td>2</td>
+    <td>1900-01-01 09:29:00</td>
+    <td>1/9/2009</td>
+	  <td>1900-01-01 09:56:00</td>
+	  <td>00:27:00</td>
+  </tr>
+	<tr>
+    <td>3</td>
+    <td>1900-01-01 09:20:00</td>
+    <td>1/11/2009</td>
+	  <td>1900-01-01 10:13:00</td>
+	  <td>00:53:00</td>
+  </tr>
+	<tr>
+    <td>4</td>
+    <td>1900-01-01 15:11:00</td>
+    <td>1/16/2009</td>
+	  <td>1900-01-01 15:50:00</td>
+	  <td>00:39:00</td>
+  </tr>
+	<tr>
+    <td>5</td>
+    <td>1900-01-01 22:52:00</td>
+    <td>1/17/2009</td>
+	  <td>1900-01-01 23:26:00</td>
+	  <td>00:34:00</td>
+  </tr>
+	<!---------------------->
+	 <tr>
+     <td>6</td>
+    <td>1900-01-01 05:48:00</td>
+    <td> 1/19/2009</td>
+	  <td>1900-01-01 06:32:00</td>
+	  <td>00:44:00</td>
+  </tr>
+	 <tr>
+    <td>7</td>
+    <td>1900-01-01 23:46:00</td>
+    <td>1/20/2009</td>
+	  <td>1900-01-01 00:21:00</td>
+	  <td>00:35:00</td>
+  </tr>
+	<tr>
+    <td>8</td>
+    <td>1900-01-01 21:29:00</td>
+    <td>1/20/2009</td>
+	  <td>1900-01-01 22:08:00</td>
+	  <td>00:39:00</td>
+  </tr>
+	<tr>
+    <td>9</td>
+    <td>1900-01-01 07:33:00</td>
+    <td>1/23/2009</td>
+	  <td>1900-01-01 07:55:00</td>
+	  <td>00:22:00</td>
+  </tr>
+	<tr>
+    <td>10</td>
+    <td>1900-01-01 19:33:00</td>
+    <td>1/30/2009</td>
+	  <td>1900-01-01 20:01:00</td>
+	  <td>00:28:00</td>
+  </tr>
+</table>
+</div>
+</br>
+	<a href="https://stackoverflow.com/questions/29907529/add-24-hours-to-a-negative-time-difference-in-python">link "Advance diff by panda"</a>
 	</p>
 </br>
 </div>
+
 <!----------------------------------->
 <div id="now" class="tabcontent">
 	<h3>
@@ -728,7 +968,7 @@ WEBSITE_URL = <div class="text-info"> 'https://www.binance.com'</div></br>
 	   <div class="text-info">
  	     #timestamp in request binance
 	     </div>
-	     kwargs['data']['timestamp'] = int(time.time() * 1000)
+	    <button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'request')"> kwargs['data']['timestamp'] = int(time.time() * 1000)</button></br>
 	    
 	</p>
 	
@@ -786,8 +1026,48 @@ It's nearly impossible to know what timezone the timestamps are in otherwise: UT
 	<h3>
 		تبدیل زمان منطقه به زمان هماهنگ جهانی
 	</h3>
-	<p>		
-		
+
+	<p>
+		def <button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'ConvertTimeToMili')">TimezoneToUTC(date_str):</button></br>
+</br>
+		<div class="space">
+			d = dateparser.parse(date_str,settings={'TO_TIMEZONE': 'UTC'})#start time:00:00:00</br>
+			<div class="text-info">
+			#d = dateparser.parse(date_str)#start time:04:30:00</br>
+</br>
+			logging.info("after put date_str to dateparser: " + str(d)+" "+"type: "+str(type(d)))</br>
+</br>
+			#........................</br>
+			# if the date is not timezone aware apply UTC timezone</br>
+			</div>
+			if d.tzinfo is None or d.tzinfo.utcoffset(d) is None:</br>
+			<div class="space">
+				d = d.replace(tzinfo=pytz.utc)</br>
+</br>
+				logging.info("if d.tzinfo is None or d.tzinfo.utcoffset(d) is None:"+str(d))</br>
+			</div>
+		</div>
+	</p>
+	<h4>Avoid using datetime.replace(tzinfo=…) to make timezones aware</br>
+	It will only work with UTC and the behavior is inconsistent with other timezones. Rather use localize() as above.</br>
+		<a href="https://medium.com/swlh/making-sense-of-timezones-in-python-16d8ae210c1c">link "Avoid using datetime.replace(tzinfo=…)" </a></br>
+	</h4>
+	</br></br>
+	<p>
+		def TimezoneToUTC():
+		<div class="space">
+			from datetime import datetime</br>
+			from pytz import timezone</br>
+</br>
+			naive = datetime(2020, 8, 29, 21, 28)</br>
+</br>
+			UTC = timezone('UTC')</br>
+			IRR = timezone('Iran')</br>
+</br>
+			aware = UTC.localize(naive)</br>
+</br>
+			time_in_iran = aware.astimezone(IRR)</br>
+		</div>
 	</p>
 </br>
 </div>
@@ -805,8 +1085,39 @@ It's nearly impossible to know what timezone the timestamps are in otherwise: UT
 	<h3>
 		چک کردن تاریخ وساعت برای برقراری امنیت در ارتباط با سرور بایننس 
 	</h3>
-	<p>		
-		
+	<p>
+		 def TimeSecurity(self):
+	<div class="space">
+		<div class="text-info">
+        #Time Security</br>
+		#1-recvWindow:,</br>
+		#2-timestamp:,</br>
+		#3-servertime:</br>
+		</div>
+</br>
+        recvWindow=5000</br>
+        timestamp=int(time.time()*1000)</br>
+        servertime=int(self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'TimeServer')">get_server_time()['serverTime'])</button></br>
+</br>
+        logging.info("timestamp:"+str(timestamp))</br>
+        logging.info("servertime+1000:"+str(servertime+1000))</br>
+        logging.info("servertime-timestamp:"+str(servertime-timestamp))</br>
+        logging.info('recvWindow:'+str(recvWindow))</br>
+</br>
+		<div class="text-info">
+			#important
+		</div>
+	    if((timestamp &lt; servertime+1000) and(servertime-timestamp&lt;=recvWindow)):</br>
+		<div class="space">
+            return True</br>
+		</div>
+        else:</br>
+		<div class="space">
+            return False</br>
+		</div>
+	</br>
+	</div>
+
 	</p>
 </br>
 </div>
@@ -815,7 +1126,27 @@ It's nearly impossible to know what timezone the timestamps are in otherwise: UT
 	<h3>
 		زمان برگشتی از سرور بایننس یا تاریخ و ساعت سرور بایننس
 	</h3>
-	<p>		
+	<p>
+  	def get_server_time(self):
+		<div class="space">
+	      <div class="text-info">
+        """</br>
+			  Test connectivity to the Rest API and get the current server time.</br>
+        :returns: Current server time</br>
+</br>
+        .. code-block:: python</br>
+</br>
+            {</br>
+                "serverTime": 1499827319559</br>
+            }</br>
+</br>
+        :raises: BinanceResponseException, BinanceAPIException</br>
+</br>
+        """</br>
+			  </div>
+        return self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'get')">_get('time')</button>
+	    </div>
+
 		
 	</p>
 </br>
