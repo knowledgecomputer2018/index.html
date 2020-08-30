@@ -12,11 +12,13 @@
 <div class="tab">
   
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'request')">بایننس</button>
+   
    <button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'Crypto')">رمزنگاری</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Params')">تبدیل پارامتر ها به لیست</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Responsehandle')">ارزیابی پاسخ درخواست</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'RequestException')">خطایابی درخواست</button>
    <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'APIException')">خطایابی توابع بایننس</button>
+   <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'debugRequest')">خطاهای درخواست وراه حل</button>
   <button class="tablinks " style="font-weight:bold" onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
      <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'get')">ایجاد درخواست</button>
      <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'request_api')">درخواست به توابع بایننس</button>
@@ -26,6 +28,7 @@
 	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'TypesTimes')">انواع زمان ها </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'epoch')"> epoch </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timestamp')">timestamp </button>
+	<button class="tablinks " style="padding-left:200px" onclick="openCity(event, 'debugTimestamp')">debug timestamp </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timezone')">timezone </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'UTC')">UTC </button>
 	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimezoneToUTC')">TimezoneToUTC</button>
@@ -44,8 +47,9 @@
   <button class="tablinks " style="font-weight:bold"  onclick="openCity(event, 'Candles')">کندل </button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'TradingView')">مشاهده کندل در وب سایت تریدینگ ویو </button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'CandleInfor')">اطلاعات برگشتی از یک کندل  </button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'CandleTime')">کندل ها از نظر زمانی </button>
+	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'CandleTime')">کندل ها از نظر زمانی یا اینتروال </button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'GetCandle')">گرفتن اطلاعات یک کندل از بایننس </button>
+	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'debugGetCandle')">خطایابی گرفتن کندل </button>
 	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'MultiGetCandle')">گرفتن اطلاعات دریک دوره زمانی (کندل) بایننس </button>
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Paris')">اندیکاتور</button>
 <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'test')">  
@@ -125,6 +129,31 @@
 </div>
   </p>
 </div>
+<!----------------------------------->
+<div id="debugRequest" class="tabcontent">
+	<h3>
+		خطایابی درخواست
+	</h3>
+	
+	<p>
+	<div class="text-info">
+	1-</br>
+	
+	  error:Signature for this request is not valid
+	</div>  
+	</br>
+		solution1:</br>One of your parameters may not be in the correct format.</br>
+		Check recvWindow is an integer and not a string.</br>
+		</br>
+		solution2:</br>You may need to regenerate your API Key and Secret</br>
+		</br>
+		solution3:</br>You may be attempting to access the API from a Chinese IP address, these are now restricted by Binance.</br>
+		</br>
+	</p>
+	
+</br>
+</div>
+
 <!----------------------------------->
 <div id="Paris" class="tabcontent">
   <h3>اندیکاتور</h3>
@@ -1017,31 +1046,20 @@ Out[2]:</br>
 			<div class="text-info">
         """Kline/candlestick bars for a symbol. Klines are uniquely identified by their open time.</br>
 	    #input</br></br>
-		#....
+		#....</br>
         :param symbol: required</br>
         :type symbol: str</br>
         :param interval: -</br>
         :type interval: enum</br>
-		#.......................... warning .......</br>
-		#print(t.get_klines('ADAUSDT','1m',10,2020/8/30,''))</br>
-		#error:TypeError: get_klines() takes 1 positional argument but 6 were given</br>
-		</br>
-		#print(t.get_klines(symbol='ADAUSDT',interval='1m',start_str='2020/8/30'))</br>
-		#error: APIError(code=-1104): Not all sent parameters were read; read '2' parameter(s) but was sent '3'.</br>
-		</br>
-		#................ ........ ........ </br>
-		print(t.get_klines(symbol='ADAUSDT',interval='1m'))</br>
-		#no error</br>
-		#...............  END warning .......</br>
-		</br>
+		#.....</br>
         :param limit: - Default 500; max 500.</br>
         :type limit: int</br>
         :param startTime:</br>
         :type startTime: int</br>
         :param endTime:</br>
         :type endTime: int</br>
-</br>
-        :raises: BinanceResponseException, BinanceAPIException</br>
+</br>		
+		:raises: BinanceResponseException, BinanceAPIException</br>		
 </br>
         """</br>
 			</div>
@@ -1050,6 +1068,46 @@ Out[2]:</br>
 	    </div>
 	</p>
 </br>
+</div>
+<!----------------------------------->
+<div id="debugGetCandle" class="tabcontent">
+	<h3>
+	خطاهای گرفتن کندل برگشتی از سرور بایننس
+	</h3>
+	<p>
+	    
+		1-</br>
+		get_klines('ADAUSDT','1m',10,2020/8/30,"")</br>
+		<div class="text-info">
+		error:TypeError: get_klines() takes 1 positional argument but 6 were given</br>
+		</div>
+		</br>
+		2-</br>
+		get_klines(symbol='ADAUSDT',interval='1m',start_str='2020/8/30')</br>
+		<div class="text-info">
+		#error: APIError(code=-1104): Not all sent parameters were read; read '2' parameter(s) but was sent '3'.</br>
+		</div>
+		</br>
+		3-</br>
+		get_klines(symbol='ADAUSDT',interval=1m)</br>
+		<div class="text-info">
+		#error: SyntaxError: invalid syntax.</br>
+		</div>
+		</br>
+		4-</br>
+		get_klines(symbol='ADAUSDT',interval='1m')</br>
+		<div class="text-info">
+		#no error
+		</div>
+		</br>		
+	</p>
+</div>
+<!----------------------------------->
+<div id="GetMultiCandle" class="tabcontent">
+	<h3>
+	</h3>
+	<p>
+	</p>
 </div>
 <!----------------------------------->
 <div id="var" class="tabcontent">
@@ -1134,6 +1192,29 @@ Out[2]:</br>
 	     </div>
 	    <button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'request')"> kwargs['data']['timestamp'] = int(time.time() * 1000)</button></br>
 	    
+	</p>
+	
+</br>
+</div>
+<!----------------------------------->
+<div id="debugTimestamp" class="tabcontent">
+	<h3>
+		خطاهای برگشتی از تایم استمپ
+	</h3>
+	
+	<p>
+	<div class="text-info">
+	1-</br>
+		error:Timestamp for this request is not valid
+	</div>
+	</br>
+		solution1:</br>
+		The timestamp sent is outside of the serverTime -recvWindow </br>
+		value The timestamp sent is more than 1000ms ahead of the server time</br>
+		</br>
+		solution2:</br>Check that your system time is in sync. </br>
+		for some sample code to check the difference between your local time and the Binance server time.</br>
+	
 	</p>
 	
 </br>
