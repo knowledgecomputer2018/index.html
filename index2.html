@@ -1022,18 +1022,18 @@ Out[2]:</br>
         :type symbol: str</br>
         :param interval: -</br>
         :type interval: enum</br>
-		#.......................... warning .......
-		#print(t.get_klines('ADAUSDT','1m',10,2020/8/30,''))
-		#error:TypeError: get_klines() takes 1 positional argument but 6 were given
-		
-		#print(t.get_klines(symbol='ADAUSDT',interval='1m',start_str='2020/8/30'))
-		#error: APIError(code=-1104): Not all sent parameters were read; read '2' parameter(s) but was sent '3'.
-		
-		#................ ........ ........ 
-		print(t.get_klines(symbol='ADAUSDT',interval='1m'))
-		#no error
-		#...............  END warning .......
-		
+		#.......................... warning .......</br>
+		#print(t.get_klines('ADAUSDT','1m',10,2020/8/30,''))</br>
+		#error:TypeError: get_klines() takes 1 positional argument but 6 were given</br>
+		</br>
+		#print(t.get_klines(symbol='ADAUSDT',interval='1m',start_str='2020/8/30'))</br>
+		#error: APIError(code=-1104): Not all sent parameters were read; read '2' parameter(s) but was sent '3'.</br>
+		</br>
+		#................ ........ ........ </br>
+		print(t.get_klines(symbol='ADAUSDT',interval='1m'))</br>
+		#no error</br>
+		#...............  END warning .......</br>
+		</br>
         :param limit: - Default 500; max 500.</br>
         :type limit: int</br>
         :param startTime:</br>
