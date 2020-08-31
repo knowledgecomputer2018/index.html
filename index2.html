@@ -8,60 +8,62 @@
 <body>
 
 <style type="text/css" rel="style.css"></style>
-	<h5 style="margin-top: 0px;margin-bottom: 0px;text-align: center;">به نام  هستی بخش دلها </h5>
+	<h5 style="margin-top: 0px;margin-bottom: 0px;text-align: center;">به نام هستی بخش دلها </h5>
 <div class="tab">
-  
+
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'request')">بایننس</button>
    
    <button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'Crypto')">رمزنگاری</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Params')">تبدیل پارامتر ها به لیست</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Responsehandle')">ارزیابی پاسخ درخواست</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'RequestException')">خطایابی درخواست</button>
-   <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'APIException')">خطایابی توابع بایننس</button>
+   <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'APIException')">خطایابی توابع بایننس</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'debugRequest')">خطاهای درخواست وراه حل</button>
-  <button class="tablinks " style="font-weight:bold" onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
+  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
      <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'get')">ایجاد درخواست</button>
      <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'request_api')">درخواست به توابع بایننس</button>
-     <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'create_api_uri')">ایجاد مسیر درخواست</button>
-     <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'Consts')">ثابت ها</button>
-  <button class="tablinks " style="font-weight:bold"  onclick="openCity(event, 'Times')"> تاریخ  و  ساعت در بایننس </button>
-	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'TypesTimes')">انواع زمان ها </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'epoch')"> epoch </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timestamp')">timestamp </button>
-	<button class="tablinks " style="padding-left:200px" onclick="openCity(event, 'debugTimestamp')">debug timestamp </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timezone')">timezone </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'UTC')">UTC </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimezoneToUTC')">TimezoneToUTC</button>
+     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'create_api_uri')">ایجاد مسیر درخواست</button>
+     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Consts')">ثابت ها</button>
+  <button class="tablinks" style="font-weight:bold"  onclick="openCity(event, 'Times')"> تاریخ  و  ساعت در بایننس </button>
+	<button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'TypesTimes')">انواع زمان ها </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'epoch')"> epoch </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'timestamp')">timestamp </button>
+	<button class="tablinks" style="padding-left:200px" onclick="openCity(event, 'debugTimestamp')">debug timestamp </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'timezone')">timezone </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'UTC')">UTC </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'TimezoneToUTC')">TimezoneToUTC</button>
 	
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'timeInforce')">timeInforce </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeServer')">تاریخ وزمان سرور بایننس </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'TimeSecurity')">امنیت زمان </button>
-	<button class="tablinks " style="padding-left:90px"  onclick="openCity(event, 'ConvertTimeToMili')">تبدیل تاریخ و ساعت یا زمان به میلی ثانیه</button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'ConvertMilliToTime')"> تبدیل میلی ثانیه به تاریخ و ساعت یا زمان </button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'DiffDateTime')">تفاضل دو تاریخ </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'AdvanceDiff')">
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'timeInforce')">timeInforce </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'TimeServer')">تاریخ وزمان سرور بایننس </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'TimeSecurity')">امنیت زمان </button>
+	<button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'ConvertTimeToMili')">تبدیل تاریخ و ساعت یا زمان به میلی ثانیه</button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'ConvertMilliToTime')"> تبدیل میلی ثانیه به تاریخ و ساعت یا زمان </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'DiffDateTime')">تفاضل دو تاریخ </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'AdvanceDiff')">
 		تفاضل دوتاریخ پیشرفته
 	</button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'now')">زمان حال تاریخ و ساعت </button>
-	
-  <button class="tablinks " style="font-weight:bold"  onclick="openCity(event, 'Candles')">کندل </button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'TradingView')">مشاهده کندل در وب سایت تریدینگ ویو </button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'CandleInfor')">اطلاعات برگشتی از یک کندل  </button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'CandleTime')">کندل ها از نظر زمانی یا اینتروال </button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'GetCandle')">گرفتن اطلاعات یک کندل از بایننس </button>
-	<button class="tablinks " style="padding-left:140px" onclick="openCity(event, 'debugGetCandle')">خطایابی گرفتن کندل </button>
-	<button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'MultiGetCandle')">گرفتن اطلاعات دریک دوره زمانی (کندل) بایننس </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'now')">زمان حال تاریخ و ساعت </button>
+
+  <button class="tablinks"   style="font-weight:bold"  onclick="openCity(event, 'Candles')">کندل </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'TradingView')">مشاهده کندل در وب سایت تریدینگ ویو </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'CandleInfor')">اطلاعات برگشتی از یک کندل  </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'CandleTime')">کندل ها از نظر زمانی یا اینتروال </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'GetCandle')">گرفتن اطلاعات یک کندل از بایننس </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'debugGetCandle')">خطایابی گرفتن کندل </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'MultiGetCandle')">گرفتن اطلاعات دریک دوره زمانی (کندل) بایننس </button>
+	<button class="tablinks" style="padding-left:180px" onclick="openCity(event, 'IntervalToMilli')"/>
+		تبدیل فاصله زمانی به میلی ثانیه
+	</button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'ConstKandle')">ثوابت کندل ها در بایننس </button>
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Paris')">اندیکاتور</button>
 <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'test')">  
 	<h1 style="color:Tomato">معرفی استراتژی برای کسب سود در معامله</h1>
 </button>
 <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'PythonTu')">آموزش پایتون</button>
-    <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'Var')"> متغیرها</button>
-    <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'function')">توابع  </button>
-    <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'class')">کلاس ها </button>
-    <button class="tablinks " style="padding-left:90px" onclick="openCity(event, 'lib')">کتابخانه ها </button>
-	
-  
+    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Var')"> متغیرها</button>
+    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'function')">توابع  </button>
+    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'class')">کلاس ها </button>
+    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'lib')">کتابخانه ها </button>
 </div>
 <!----------------------------------->
 <div id="request" class="tabcontent">
@@ -1068,6 +1070,7 @@ Out[2]:</br>
 	    </div>
 	</p>
 </br>
+	<input type="button" value="Go back!" onclick="history.back()">
 </div>
 <!----------------------------------->
 <div id="debugGetCandle" class="tabcontent">
@@ -1103,12 +1106,231 @@ Out[2]:</br>
 	</p>
 </div>
 <!----------------------------------->
-<div id="GetMultiCandle" class="tabcontent">
+<div id="MultiGetCandle" class="tabcontent">
 	<h3>
+		گرفتن  کندل ها در یک بازه زمانی با اینتروال دربایننس
 	</h3>
 	<p>
+
+    def get_historical_klines(self,symbol, interval, start_str, end_str=None):
+	<div class="space">
+		<div class="text-info">
+        """Get Historical Klines from Binance</br>
+        See dateparse docs for valid start and end string formats http://dateparser.readthedocs.io/en/latest/</br>
+        If using offset strings for dates add "UTC" to date string e.g. "now UTC", "11 hours ago UTC"</br></br></br>
+        :param symbol: Name of symbol pair e.g BNBBTC</br>
+        :type symbol: str</br>
+        :param interval: Biannce Kline interval</br>
+        :type interval: str</br>
+        :param start_str: Start date string in UTC format</br>
+        :type start_str: str</br>
+        :param end_str: optional - end date string in UTC format</br>
+        :type end_str: str</br>
+        :return: list of OHLCV values</br>
+        """</br></br></br>
+
+        # create the Binance client, no need for api key</br>
+       # client = Client("", "")</br>
+</br>
+
+        # init our list</br>
+		</div>
+        output_data = []</br>
+</br>
+	   <div class="text-info">
+        # setup the max limit
+	   </div>
+        limit =500 #such as 1m: current time,current time-1m,current time-2m,current time-3m,,...????????</br>
+</br>
+       <div class="text-info">
+        # convert interval to useful value in seconds</br>
+		 </div>
+        timeframe = self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'IntervalToMilli')"> interval_to_milliseconds(interval)</button></br>
+</br>
+	    <div class="text-info">
+        # convert our date strings to milliseconds</br>
+		</div>
+        start_ts = self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'ConvertTimeToMili')"> date_to_milliseconds(start_str)</button></br>
+		<div class="text-info">
+        # if an end time was passed convert it</br>
+		</div>
+        end_ts = None</br>
+        if end_str:</br>
+		<div class="space">
+            end_ts = self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'ConvertTimeToMili')"> date_to_milliseconds(end_str)</button></br>
+		</div>
+</br>
+        idx = 0</br>
+	    <div class="text-info">
+        # it can be difficult to know when a symbol was listed on Binance so allow start time to be before list date</br>
+		</div>
+        symbol_existed = False</br>
+</br>
+        while True:</br>
+	    <div class="space">
+			<div class="text-info">
+            # fetch the klines from start_ts up to max 500 entries or the end_ts if set</br>
+			</div>
+            temp_data = self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'GetCandle')"> get_klines</button>(</br>
+			<div class="space">
+				symbol=symbol,</br>
+                interval=interval,</br>
+                limit=limit,</br>
+                startTime=start_ts,</br>
+                endTime=end_ts</br>
+            )</br>
+			</div>
+</br>
+			<div class="text-info">
+            #if(temp_data==[] or temp_data==None):#limit=0</br>
+				<div class="space">
+             #   temp_data_empty=True</br>
+              #  break</br>
+			    </div>
+
+			#print(self.milliseconds_to_date(temp_data[0][0]))</br>
+            #print("temp_data: "+str(temp_data))</br>
+            # handle the case where our start date is before the symbol pair listed on Binance</br>
+			</div>
+            if not symbol_existed and len(temp_data):</br>
+			<div class="space">
+                symbol_existed = True</br>
+				</div>
+</br>
+            if symbol_existed:</br>
+			<div class="space">
+				<div class="text-info">
+                # append this loops data to our output data</br>
+				</div>
+                output_data += temp_data</br>
+</br>
+				<div class="text-info">
+                # update our start timestamp using the last value in the array and add the interval timeframe</br>
+				</div>
+                start_ts = temp_data[len(temp_data) - 1][0] + timeframe</br>
+			</div>
+            else:</br>
+			<div class="space">
+				<div class="text-info">
+                # it wasn't listed yet, increment our start date</br>
+				</div>
+                start_ts += timeframe
+			</div>
+            logging.info("idx  %s" , idx)</br>
+            idx += 1</br>
+			<div class="text-info">
+            # check if we received less than the required limit and exit the loop</br>
+			</div>
+            if len(temp_data) < limit:</br>
+			<div class="space">
+				<div class="text-info">
+                # exit the while loop</br>
+				</div>
+                break
+			</div>
+</br>
+			<div class="text-info">
+			# sleep after every 3rd call to be kind to the API</br>
+			</div>
+            if idx % 3 == 0:</br>
+			<div class="space">
+                sleep(1)
+			</div>
+		</div>
+        '''</br>
+	    <div class="text-info">
+        # open a file with filename including symbol, interval and start and end converted to milliseconds</br>
+        with open(
+	    <div class="space">
+            "Binance_{}_{}_{}-{}.json".format(</br>
+                symbol,</br>
+                interval,</br>
+                self.date_to_milliseconds(start_ts),</br>
+                self.date_to_milliseconds(end_ts)</br>
+            ),</br>
+            'w'  # set file write mode</br>
+        ) as f:</br>
+            f.write(json.dumps(temp_data))</br>
+		</div>
+        '''</br>
+		</div>
+
+        return output_data</br>
+	</div>
+	</p>
+	<input type="button" value="Go back!" onclick="history.back()">
+</div>
+<!----------------------------------->
+<div id="IntervalToMilli" class="tabcontent">
+	<h3>
+		تبدیل اینتروال یا فاصله زمانی بایننس به میلی ثانیه
+	</h3>
+	<p>
+		def interval_to_milliseconds(self,interval):
+		<div class="space">
+			<div class="text-info">
+			"""Convert a Binance interval string to milliseconds</br>
+			:param interval: Binance interval string 1m, 3m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 8h, 12h, 1d, 3d, 1w</br>
+			:type interval: str</br>
+			:return:</br>
+				 None if unit not one of m, h, d or w</br>
+				 None if string not in correct format</br>
+				 int value of interval in milliseconds</br>
+			"""</br>
+			</div>
+			ms = None</br>
+			seconds_per_unit = {</br>
+			<div class="space">
+				"m": 60,</br>
+				"h": 60 * 60,</br>
+				"d": 24 * 60 * 60,</br>
+				"w": 7 * 24 * 60 * 60,</br>
+				"M": 30 * 24 * 60 * 60</br>
+			}</br>
+			</div>
+			unit = interval[-1]</br>
+			if unit in seconds_per_unit:</br>
+			<div class="space">
+				try:</br>
+				<div class="space">
+					ms = int(interval[:-1]) * seconds_per_unit[unit] * 1000</br>
+				</div>
+				except ValueError:</br>
+				<div class="space">
+					pass</br>
+				</div>
+	        </div>
+			return ms</br>
+	</div>
 	</p>
 </div>
+<!----------------------------------->
+<div id="ConstKandle" class="tabcontent">
+	<h3>
+		ثابت  های بخش کندل در بایننس
+	</h3>
+	<p>
+</br>
+    KLINE_INTERVAL_1MINUTE = '1m'</br>
+    KLINE_INTERVAL_3MINUTE = '3m'</br>
+    KLINE_INTERVAL_5MINUTE = '5m'</br>
+    KLINE_INTERVAL_15MINUTE = '15m'</br>
+    KLINE_INTERVAL_30MINUTE = '30m'</br>
+    KLINE_INTERVAL_1HOUR = '1h'</br>
+    KLINE_INTERVAL_2HOUR = '2h'</br>
+    KLINE_INTERVAL_4HOUR = '4h'</br>
+    KLINE_INTERVAL_6HOUR = '6h'</br>
+    KLINE_INTERVAL_8HOUR = '8h'</br>
+    KLINE_INTERVAL_12HOUR = '12h'</br>
+    KLINE_INTERVAL_1DAY = '1d'</br>
+    KLINE_INTERVAL_3DAY = '3d'</br>
+    KLINE_INTERVAL_1WEEK = '1w'</br>
+    KLINE_INTERVAL_1MONTH = '1M'</br>
+</br>
+	</p>
+</div>
+
+
 <!----------------------------------->
 <div id="var" class="tabcontent">
 	<h3>
@@ -1425,5 +1647,6 @@ tablinks[i].className = tablinks[i].className.replace(" active", "");
   // Show the current tab, and add an "active" class to the link that opened the tab
 document.getElementById(cityName).style.display = "block";
 evt.currentTarget.className += " active";
+
 }
   </script>
