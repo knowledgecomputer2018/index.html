@@ -11,14 +11,22 @@
 	<h5 style="margin-top: 0px;margin-bottom: 0px;text-align: center;">به نام هستی بخش دلها </h5>
 <div class="tab">
 
-  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'request')">بایننس</button>
-   
+  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Binance')">بایننس</button>
+   <button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'request')">درخواست</button>
    <button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'Crypto')">رمزنگاری</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Params')">تبدیل پارامتر ها به لیست</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Responsehandle')">ارزیابی پاسخ درخواست</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'RequestException')">خطایابی درخواست</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'APIException')">خطایابی توابع بایننس</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'debugRequest')">خطاهای درخواست وراه حل</button>
+   <!--<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'VarLenArg')">آموزش پایتون</button>-->
+  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'getExchange')"> اطلاعات وب سایت بایننس  </button> 
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'RateLimit')">محدودیت های بایننس</button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'InforAllCurrency')">دریافت اطلاعات همه ارزها</button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'filters')">فیلترهای یک جفت ارز</button>
+  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'getCurrency')">
+  اطلاعات ارزهای بایننس
+  </button> 
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
      <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'get')">ایجاد درخواست</button>
      <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'request_api')">درخواست به توابع بایننس</button>
@@ -56,14 +64,27 @@
 	</button>
 	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'ConstKandle')">ثوابت کندل ها در بایننس </button>
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Paris')">اندیکاتور</button>
-<button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'test')">  
-	<h1 style="color:Tomato">معرفی استراتژی برای کسب سود در معامله</h1>
-</button>
 <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'PythonTu')">آموزش پایتون</button>
     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Var')"> متغیرها</button>
     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'function')">توابع  </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'VarLenArg')">*kwargs  </button>
+	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'VarLenKeyArg')">**kwargs  </button>
     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'class')">کلاس ها </button>
     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'lib')">کتابخانه ها </button>
+	<button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'test')">  
+	<h1 style="color:Tomato">معرفی استراتژی برای کسب سود در معامله</h1>
+</button>
+
+</div>
+<!----------------------------------->
+<div id="Binance" class="tabcontent">
+  <h3>
+	  بایننس
+  </h3>
+
+  <p>
+	  
+  </p>
 </div>
 <!----------------------------------->
 <div id="request" class="tabcontent">
@@ -156,6 +177,234 @@
 </br>
 </div>
 
+<!----------------------------------->
+<div id="getExchange" class="tabcontent">
+  <h3>
+  دریافت اطلاعات وب سایت بایننس
+  </h3>
+  <p>
+   def get_exchange_info(self):
+   <div class="space">
+		<div class="text-info">
+        """Return rate limits and list of symbols</br>
+</br>
+        :returns: list - List of product dictionaries</br>
+</br>
+        .. code-block:: python</br>
+</br>
+            {</br>
+			'timezone': 'UTC',</br>
+			'serverTime': 1598881503783,</br>
+			'rateLimits':[Part_Ratelimit],</br>
+			'exchangeFilters': [empty],</br>
+			'symbols':[</br>
+					{</br>
+					symbol1:,</br>
+					....</br>
+					,</br>
+					'orderTypes':[],</br>
+					....</br>
+					,</br>
+					....</br>
+					,'filters':[Part_Filters],</br>
+					'permissions':[]},</br>
+					{symbol2:},</br>
+					...]</br>
+			}</br>
+ </br>
+        :raises: BinanceResponseException, BinanceAPIException</br>
+</br>
+        """</br>
+			</div>
+		
+
+        return self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'get')">_get('exchangeInfo')</button>
+		</div>
+  </p>
+  </div>
+  <!----------------------------------->
+<div id="RateLimit" class="tabcontent">
+  <h3>
+ محدودیت های بایننس  همراه با نوع یا
+ </br>
+ RateLimits
+  </h3>
+  <p>
+  
+  <h4>"rateLimits":</h4> [
+                    {</br>
+						<div class="text-info">
+                        "rateLimitType": "REQUESTS",
+						</div>
+                        "interval": "MINUTE",</br>
+                        "limit": 1200</br>
+                    },</br>
+                    {</br>
+					<div class="text-info">
+                        "rateLimitType": "ORDERS",
+					</div>
+                        "interval": "SECOND",</br>
+                        "limit": 10</br>
+                    },</br>
+                    {</br>
+					<div class="text-info">
+                        "rateLimitType": "ORDERS",
+					</div>
+                        "interval": "DAY",</br>
+                        "limit": 100000</br>
+                    }</br>
+                ],</br>
+				</br>
+  </p>
+  </div>
+
+<!----------------------------------->
+<div id="InforAllCurrency" class="tabcontent">
+  <h3>
+ دریافت اطلاعات همه ارزهای بایننس
+ </br>
+ ETHBTC
+  </h3>
+  <p>
+ {</br>
+ <h4>'symbol': 'ETHBTC',</h4></br>
+ 
+ 'status':<div class="text-info">'TRADING',</div>
+ 'baseAsset': <div class="text-info">'ETH', </div></br>
+ 'baseAssetPrecision':<div class="text-info"> 8,</div>
+ 'quoteAsset': <div class="text-info">'BTC',</div>
+ 'quotePrecision':<div class="text-info"> 8,</div>
+ 'quoteAssetPrecision':<div class="text-info"> 8, </div>
+ 'baseCommissionPrecision': <div class="text-info">8,</div>
+ 'quoteCommissionPrecision': <div class="text-info">8,</div>
+ 'orderTypes': <div class="text-info">['LIMIT', 'LIMIT_MAKER', 'MARKET', 'STOP_LOSS_LIMIT', 'TAKE_PROFIT_LIMIT'], </div>
+ 'icebergAllowed':<div class="text-info"> True, </div>	
+ 'ocoAllowed':<div class="text-info"> True, </div>
+ 'filters':<div class="text-info">[PART_Filtters],</div>
+ 'quoteOrderQtyMarketAllowed': <div class="text-info">True, </div>
+ 'isSpotTradingAllowed': <div class="text-info">True, </div>
+ 'isMarginTradingAllowed': <div class="text-info">True,</div>
+ 'permissions': <div class="text-info">['SPOT', 'MARGIN']</div>
+ },</br>
+ {</br>
+ ....</br>
+ }</br>
+ </br>
+</br>
+  </p>
+ </div>
+  <!----------------------------------->
+<div id="filters" class="tabcontent">
+  <h3>
+ فیلترهای یک ارز دربایننس
+ </br>
+ Filters (ETH-BTC)
+  </h3>
+  <p>
+  
+  <h4>'filters'</h4>: [
+  {</br>
+  <div class="text-info">
+  'filterType':'PRICE_FILTER', </br>
+  </div>
+		'minPrice': '0.00000100'</br>
+		, 'maxPrice': '100000.00000000', </br>
+		'tickSize': '0.00000100'</br>
+		},</br>
+ {</br>
+ <div class="text-info">
+ 'filterType': 'PERCENT_PRICE',</br>
+ </div>
+ 'multiplierUp': '5',</br>
+ 'multiplierDown': '0.2',</br>
+ 'avgPriceMins': 5
+ },</br>
+ {</br>
+ <div class="text-info">
+ 'filterType': 'LOT_SIZE',</br>
+ </div>
+ 'minQty': '0.00100000', </br>
+ 'maxQty': '100000.00000000',</br>
+ 'stepSize': '0.00100000'</br>
+	},</br>
+ {</br>
+ <div class="text-info">
+ 'filterType': 'MIN_NOTIONAL', </br>
+ </div>
+	'minNotional': '0.00010000',</br>
+	'applyToMarket': True,</br>
+	'avgPriceMins': 5</br>
+}, </br>
+ {
+ <div class="text-info">
+ 'filterType': 'ICEBERG_PARTS', </br>
+ </div>
+ 'limit': 10</br>
+ }, </br>
+ {
+ <div class="text-info">
+ 'filterType': 'MARKET_LOT_SIZE', </br>
+ </div>
+ 'minQty': '0.00000000',</br>
+ 'maxQty': '8425.97418485', </br>
+ 'stepSize': '0.00000000'</br>
+ },</br>
+ {</br>
+ <div class="text-info">
+ 'filterType': 'MAX_NUM_ALGO_ORDERS',</br>
+ </div>
+ 'maxNumAlgoOrders': 5</br>
+ }, </br>
+ {
+ <div class="text-info">
+ 'filterType': 'MAX_NUM_ORDERS',
+ </div>
+ 'maxNumOrders': 200</br>
+ }</br>
+ ], </br>
+ </br>
+  </p>
+  </div>
+ <!----------------------------------->
+<div id="getCurrency" class="tabcontent">
+  <h3>
+ دریافت اطلاعات یک جفت ارز در بایننس
+   </h3>
+  <p>
+   def get_symbol_info(self, symbol):
+   <div class="space">
+	<div class="text-info">
+        """Return information about a symbol</br>
+</br>
+        :param symbol: required e.g BNBBTC</br>
+        :type symbol: str</br>
+</br>
+        :returns: Dict if found, None if not</br>
+</br>
+        .. code-block:: python</br>
+</br>
+            {</br>
+				Part getExchange</br>
+            }</br>
+</br>
+        :raises: BinanceResponseException, BinanceAPIException</br>
+</br>
+        """</br>
+		</div>
+        res = self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'get')">_get('exchangeInfo')</button></br>
+</br>
+        for item in res['symbols']:</br>
+		<div class="space">
+            if item['symbol'] == symbol.upper():</br>
+			<div class="space">
+                return item</br>
+			</div>
+		</div>
+        return None</br>
+		</div>
+  
+  </p>
+  </div>
 <!----------------------------------->
 <div id="Paris" class="tabcontent">
   <h3>اندیکاتور</h3>
@@ -1070,7 +1319,7 @@ Out[2]:</br>
 	    </div>
 	</p>
 </br>
-	<input type="button" value="Go back!" onclick="history.back()">
+<!--	<input type="button" value="Go back!" onclick="history.back()">-->
 </div>
 <!----------------------------------->
 <div id="debugGetCandle" class="tabcontent">
@@ -1258,7 +1507,7 @@ Out[2]:</br>
         return output_data</br>
 	</div>
 	</p>
-	<input type="button" value="Go back!" onclick="history.back()">
+<!--	<input type="button" value="Go back!" onclick="history.back()">-->
 </div>
 <!----------------------------------->
 <div id="IntervalToMilli" class="tabcontent">
@@ -1269,7 +1518,7 @@ Out[2]:</br>
 		def interval_to_milliseconds(self,interval):
 		<div class="space">
 			<div class="text-info">
-			"""Convert a Binance interval string to milliseconds</br>
+			"""Convert a Binance interval string to milliseconds</br></br>
 			:param interval: Binance interval string 1m, 3m, 5m, 15m, 30m, 1h, 2h, 4h, 6h, 8h, 12h, 1d, 3d, 1w</br>
 			:type interval: str</br>
 			:return:</br>
@@ -1311,25 +1560,86 @@ Out[2]:</br>
 	</h3>
 	<p>
 </br>
-    KLINE_INTERVAL_1MINUTE = '1m'</br>
-    KLINE_INTERVAL_3MINUTE = '3m'</br>
-    KLINE_INTERVAL_5MINUTE = '5m'</br>
-    KLINE_INTERVAL_15MINUTE = '15m'</br>
-    KLINE_INTERVAL_30MINUTE = '30m'</br>
-    KLINE_INTERVAL_1HOUR = '1h'</br>
-    KLINE_INTERVAL_2HOUR = '2h'</br>
-    KLINE_INTERVAL_4HOUR = '4h'</br>
-    KLINE_INTERVAL_6HOUR = '6h'</br>
-    KLINE_INTERVAL_8HOUR = '8h'</br>
-    KLINE_INTERVAL_12HOUR = '12h'</br>
-    KLINE_INTERVAL_1DAY = '1d'</br>
-    KLINE_INTERVAL_3DAY = '3d'</br>
-    KLINE_INTERVAL_1WEEK = '1w'</br>
-    KLINE_INTERVAL_1MONTH = '1M'</br>
+    KLINE_INTERVAL_1MINUTE =
+	<div class="text-info">
+	'1m'</div>
+    KLINE_INTERVAL_3MINUTE =
+	<div class="text-info">
+	'3m'</div>
+    KLINE_INTERVAL_5MINUTE =
+	<div class="text-info">
+	'5m'</div>
+    KLINE_INTERVAL_15MINUTE =
+	<div class="text-info">
+	'15m'</div>
+    KLINE_INTERVAL_30MINUTE =
+	<div class="text-info">
+	'30m'</div>
+    KLINE_INTERVAL_1HOUR =
+	<div class="text-info">
+	'1h'</div>
+    KLINE_INTERVAL_2HOUR =
+	<div class="text-info">
+	'2h'</div>
+    KLINE_INTERVAL_4HOUR =
+	<div class="text-info">
+	'4h'</div>
+    KLINE_INTERVAL_6HOUR =
+	<div class="text-info">
+	'6h'</div>
+    KLINE_INTERVAL_8HOUR =
+	<div class="text-info">
+	'8h'</div>
+    KLINE_INTERVAL_12HOUR =
+	<div class="text-info">
+	'12h'</div>
+    KLINE_INTERVAL_1DAY =
+	<div class="text-info">
+	'1d'</div>
+    KLINE_INTERVAL_3DAY =
+	<div class="text-info">
+	'3d'</div>
+    KLINE_INTERVAL_1WEEK =
+	<div class="text-info">
+	'1w'</div>
+    KLINE_INTERVAL_1MONTH =
+	<div class="text-info">
+	'1M'</div>
 </br>
 	</p>
 </div>
 
+<!----------------------------------->
+<div id="PythonTu" class="tabcontent">
+	<h3>
+	آموزش  پایتون
+	</h3>
+	<p>		
+		var:</br>
+			pass</br>
+	</p>
+	<p>
+		functions:
+	<h4>Variable-length  Arguments</h4>
+	<div class="space">
+		Sometimes, we may not know the number of arguments going to be pass</br>
+	    ed in the function, in that case, we can use variable-length arguments.</br>
+		<h5>The arguments we pass as Variable-length Arguments are treated as tuple.</h5>
+	</div>
+	</p>
+	<p>
+	<h4>Variable-length Keyword  Arguments</h4>
+	<div class="space">
+	Python allows us to send arguments in key=value format.</br>
+	These are those keyword arguments that do not have fixed length i.e.</br>
+	during defining a function we do not know the number of keyword arguments are going to be passed.</br>
+	<h5>The arguments we pass as Variable-length Keyword Arguments are treated as dictionary.</h5>
+	</div>
+	</p>
+
+</br>
+</div>
+<!----------------------------------->
 
 <!----------------------------------->
 <div id="var" class="tabcontent">
@@ -1348,6 +1658,76 @@ Out[2]:</br>
 		
 	</p>
 </br>
+</div>
+<!----------------------------------->
+<div id="VarLenArg" class="tabcontent">
+	<h3>
+		ارگومان با طول متغیر
+		
+	</h3>
+	
+	<p>
+	<div class="text-info">
+	#Variable-length  Arguments
+	</div>
+	</br>
+	def addAll(*args):
+	<div class="space">
+		print(type(args))</br>
+		print(args)</br>
+		result=0</br>
+		for x in args:</br>
+		<div class="space">
+			result=result+x</br>
+		</div>
+		return result</br></br>
+	print("sum is",addAll(1,2,3,4,5,6))</br>
+	print("sum is",addAll(1,2,3))</br>
+	print("sum is",addAll(1,2))</br>
+	print("sum is",addAll(1,2,3,4,5,6,7,8,9))</br>
+	</div></br></br>
+	<div class="text-info">
+	  sum:21</br>
+	  sum:6</br>
+	  sum:3</br>
+	  sum:45</br>
+	</div>
+	</p>
+	
+</div>
+<div id="VarLenKeyArg" class="tabcontent">
+	<h3>
+		ارگومان با طول متغیر
+		</br>
+		key=value
+	</h3>
+	
+	<p>
+	<div class="text-info">
+	#Variable-length Keyword Arguments
+	</div>
+	</br>
+	def addAll(**kwargs):
+	<div class="space">
+		print(type(kwargs))</br>
+		print(kwargs)</br>
+		result=0</br>
+		for x in kwargs:</br>
+		<div class="space">
+			result=result+kwargs[x]</br>
+		</div>
+		return result</br></br>
+	print(addAll(key1=1, key2=2, key3=3))</br>
+	print(addAll(key1=3, key2=1, key3=2))</br>
+	print(addAll(key1=3, key2=2, key3=1))</br>
+	</div></br></br>
+	<div class="text-info">
+	  sum:6</br>
+	  sum:6</br>
+	  sum:6</br>
+	</div>
+	</p>
+	
 </div>
 <!----------------------------------->
 <div id="class" class="tabcontent">
