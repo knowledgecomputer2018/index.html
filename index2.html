@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="style.css"/>
 
 	<title>Salam</title>
-	<!--	#SEO  
+		<!--	#SEO  
 	{% raw %}{% seo %}{% endraw %}-->
 	<meta charset="UTF-8">
   <meta name="description" 
@@ -17,6 +17,7 @@
 	
   <meta name="author" content="Person">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
 
@@ -33,6 +34,11 @@
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'APIException')">خطایابی توابع بایننس</button>
    <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'debugRequest')">خطاهای درخواست وراه حل</button>
    <!--<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'VarLenArg')">آموزش پایتون</button>-->
+  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
+     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'get')">ایجاد درخواست</button>
+     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'request_api')">درخواست به توابع بایننس</button>
+     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'create_api_uri')">ایجاد مسیر درخواست</button>
+     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Consts')">ثابت ها</button>
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'getExchange')"> اطلاعات وب سایت بایننس  </button> 
 	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'RateLimit')">محدودیت های بایننس</button>
 	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'InforAllCurrency')">دریافت اطلاعات همه ارزها</button>
@@ -40,11 +46,6 @@
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'getCurrency')">
   اطلاعات ارزهای بایننس
   </button> 
-  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Ping')">تشخیص ارتباط بایننس یا پینگ</button>
-     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'get')">ایجاد درخواست</button>
-     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'request_api')">درخواست به توابع بایننس</button>
-     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'create_api_uri')">ایجاد مسیر درخواست</button>
-     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Consts')">ثابت ها</button>
   <button class="tablinks" style="font-weight:bold"  onclick="openCity(event, 'Times')"> تاریخ  و  ساعت در بایننس </button>
 	<button class="tablinks" style="padding-left:90px"  onclick="openCity(event, 'TypesTimes')">انواع زمان ها </button>
 	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'epoch')"> epoch </button>
@@ -1347,19 +1348,34 @@ Out[2]:</br>
 		error:TypeError: get_klines() takes 1 positional argument but 6 were given</br>
 		</div>
 		</br>
+		
 		2-</br>
-		get_klines(symbol='ADAUSDT',interval='1m',start_str='2020/8/30')</br>
+		get_klines(symbol='ADAUSDT',interval='1m',startTime='2020/8/30')</br>
 		<div class="text-info">
 		#error: APIError(code=-1104): Not all sent parameters were read; read '2' parameter(s) but was sent '3'.</br>
 		</div>
 		</br>
+		
 		3-</br>
+		get_klines(symbol='ADAUSDT',interval='1m',startTime=
+		<button style="background-color:white;border:0px white solid;font-weight:bold;" 
+		class="tablinks" onclick="openCity(event, 'ConvertTimetoMili')">
+		date_to_milliseconds('1/9/2020'))
+		</button>
+		</br>
+		<div class="text-info">
+		#no error</br>
+		</div>
+		</br>
+		
+		4-</br>
 		get_klines(symbol='ADAUSDT',interval=1m)</br>
 		<div class="text-info">
 		#error: SyntaxError: invalid syntax.</br>
 		</div>
 		</br>
-		4-</br>
+		
+		5-</br>
 		get_klines(symbol='ADAUSDT',interval='1m')</br>
 		<div class="text-info">
 		#no error
@@ -2021,7 +2037,7 @@ It's nearly impossible to know what timezone the timestamps are in otherwise: UT
 
 
   <script >
-  function openCity(evt, cityName) {
+  function openCity(evt, Name) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -2038,7 +2054,7 @@ tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
   // Show the current tab, and add an "active" class to the link that opened the tab
-document.getElementById(cityName).style.display = "block";
+document.getElementById(Name).style.display = "block";
 evt.currentTarget.className += " active";
 
 }
