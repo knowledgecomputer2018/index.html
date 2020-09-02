@@ -77,7 +77,21 @@
 		تبدیل فاصله زمانی به میلی ثانیه
 	</button>
 	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'ConstKandle')">ثوابت کندل ها در بایننس </button>
-  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Paris')">اندیکاتور</button>
+	
+	<button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'SaveCandle')">کندل ها و ذخیره سازی </button>
+		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'txt')">notepad</button>
+		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'XML')">XML</button>
+		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'CSV')">CSV</button>
+		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Sqlite')">Sqlite</button>
+		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Sqlserver')">Sqlserver</button>
+		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Oracle')">Oracle</button>
+		
+  <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Indicator')">اندیکاتور</button>
+	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'max')">max</button>
+	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'min')">min</button>
+	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'mean')">mean</button>
+	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'SMA')">SMA</button>
+  
 <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'PythonTu')">آموزش پایتون</button>
     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Var')"> متغیرها</button>
     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'function')">توابع  </button>
@@ -85,6 +99,9 @@
 	<button class="tablinks" style="padding-left:140px" onclick="openCity(event, 'VarLenKeyArg')">**kwargs  </button>
     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'class')">کلاس ها </button>
     <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'lib')">کتابخانه ها </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Panda')">پاندا </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Numpy')">Numpy </button>
+	<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Series')">Series </button>
 	<button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'test')">  
 	<h1 style="color:Tomato">معرفی استراتژی برای کسب سود در معامله</h1>
 </button>
@@ -420,48 +437,6 @@
   </p>
   </div>
 <!----------------------------------->
-<div id="Paris" class="tabcontent">
-  <h3>اندیکاتور</h3>
-  <p>
-  import pandas as pd</br>
-
-			<p class="text-info">	#SMA AND STOCKASTIC RSI:</p>
-Numbers=pd.Series([1, 25, 3, 11, 24, 6,4,2,5,23,5,27,12,19,15,18,33,51,21,40])</br>
-lowestlow = pd.Series.rolling(Numbers,window=14,center=False).min()</br>
-print(lowestlow)</br>
-highesthigh = pd.Series.rolling(Numbers, window=14, center=False).max()</br>
-print(highesthigh)</br>
-<p class="text-info"> #Creating the Series</p>
-result = pd.Series.rolling(Numbers,window=2).mean()</br>
-StoRSI=100*((Numbers-lowestlow)/(highesthigh-lowestlow))</br>
-print(StoRSI)</br>
-K=pd.Series.rolling(StoRSI,window=3).mean()</br>
-print(K)</br>
-D=pd.Series.rolling(K,window=3).mean()</br>
-print(D)</br>
-
-'''</br>
-<p class="text-info"> # Create the Index </br>
-#index = ['Zam Zam', 'Sprite', 'Coke', 'Fanta', 'Dew', 'ThumbsUp']</br>
-# set the index </p>  </br>
-sr.index = index #what is different index and index_</br>
-<p class="text-info">  # Print the series	</br>
-# Find sum over a window size of 2 </br>
-#result = sr.rolling(window=2).mean()</p>	</br>
-'''</br>
-'''</br>
-<p class="text-info"> #result</p>
-Zam Zam      NaN</br>
-Sprite      17.5</br>
-Coke        14.0</br>
-Fanta        7.0</br>
-Dew         17.5</br>
-ThumbsUp    15.0</br>
-dtype: float64</br>
-'''</br>
-<p class="text-info"> #there was no element previous to it so the sum could not be performed.</p>
-  </p>
-</div>
 <div id="Crypto" class="tabcontent">
 	<h3>رمزنگاری </h3>
 	<p>
@@ -1637,7 +1612,14 @@ Out[2]:</br>
 </br>
 	</p>
 </div>
-
+<!----------------------------------->
+<div id="Indicator" class="tabcontent">
+	<h3>
+		اندیکاتور
+	</h3>
+	<p>
+	</p>
+</div>
 <!----------------------------------->
 <div id="PythonTu" class="tabcontent">
 	<h3>
