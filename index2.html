@@ -80,16 +80,17 @@
 	
 	<button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'SaveCandle')">کندل ها و ذخیره سازی </button>
 		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'txt')">notepad</button>
+		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'JSON')">JSON</button>
 		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'XML')">XML</button>
-		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'CSV')">CSV</button>
+		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Csv')">CSV</button>
 		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Sqlite')">Sqlite</button>
 		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Sqlserver')">Sqlserver</button>
 		<button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Oracle')">Oracle</button>
 		
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Indicator')">اندیکاتور</button>
-	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'max')">max</button>
-	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'min')">min</button>
-	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'mean')">mean</button>
+	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Max')">max</button>
+	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Min')">min</button>
+	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'Mean')">mean</button>
 	  <button class="tablinks" style="padding-left:90px" onclick="openCity(event, 'SMA')">SMA</button>
   
 <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'PythonTu')">آموزش پایتون</button>
@@ -1558,6 +1559,7 @@ Out[2]:</br>
 	</p>
 </div>
 <!----------------------------------->
+
 <div id="ConstKandle" class="tabcontent">
 	<h3>
 		ثابت  های بخش کندل در بایننس
@@ -1612,6 +1614,77 @@ Out[2]:</br>
 </br>
 	</p>
 </div>
+<!-------Part DataBaseCandle ----------------->
+<!----------------------------------->
+<div id="SaveCandle" class="tabcontent">
+	<h3>
+		ذخیره کردن کندل های دریافت شده از بایننس در پایگاه داده های مختلف
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="txt" class="tabcontent">
+	<h3>
+		ذخیره کندل های دریافت شده از بایننس در پایگاه داده نوت پد با زبان پایتون
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="JSON" class="tabcontent">
+	<h3>
+		ذخیره کندل های دریافت شده از بایننس در پایگاه داده نوت پد  به صورت جی سان با زبان پایتون
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="XML" class="tabcontent">
+	<h3>
+		ذخیره کندل های دریافت شده از بایننس در پایگاه داده ایکس ام ال با زبان پایتون
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="Csv" class="tabcontent">
+	<h3>
+		 ذخیره کندل های دریافت شده از بایننس در پایگاه داده اکسل با زبان پایتون
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="Sqlite" class="tabcontent">
+	<h3>
+		ذخیره کندل های دریافت شده از بایننس در پایگاه داده اسکیو ال لایت با زبان پایتون
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="SqlServer" class="tabcontent">
+	<h3>
+		ذخیره کندل های دریافت شده از بایننس در پایگاه داده اسکیو ال سرور
+	</h3>
+	<p>
+	</p>
+</div>
+
+<!----------------------------------->
+<div id="Oracle" class="tabcontent">
+	<h3>
+		ذخیره کندل های دریافت شده از بایننس در پایگاه داده اوراکل به زبان پایتون
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+
+<!-------End Part DataBaseCandle ----------------->
+<!----------------------------------->
+<!------- Part Indicator ----------------->
 <!----------------------------------->
 <div id="Indicator" class="tabcontent">
 	<h3>
@@ -1621,6 +1694,40 @@ Out[2]:</br>
 	</p>
 </div>
 <!----------------------------------->
+<div id="Max" class="tabcontent">
+	<h3>
+		 بیشترین مقدار ورودی ها
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="Min" class="tabcontent">
+	<h3>
+		کمترین مقدار ورودی ها
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="Mean" class="tabcontent">
+	<h3>
+		میانگین ورودی ها
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="SMA" class="tabcontent">
+	<h3>
+		Simple Moving Average
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<!------- End Part Indicator ----------------->
+<!-------Part tutorial Python----------------->
 <div id="PythonTu" class="tabcontent">
 	<h3>
 	آموزش  پایتون
@@ -1650,8 +1757,6 @@ Out[2]:</br>
 
 </br>
 </div>
-<!----------------------------------->
-
 <!----------------------------------->
 <div id="var" class="tabcontent">
 	<h3>
@@ -1758,6 +1863,41 @@ Out[2]:</br>
 	</p>
 </br>
 </div>
+<!----------------------------------->
+<div id="Panda" class="tabcontent">
+	<h3>
+	</h3>
+	<p>		
+		
+	</p>
+</br>
+</div>
+<!----------------------------------->
+<div id="Numpy" class="tabcontent">
+	<h3>
+	</h3>
+	<p>		
+		
+	</p>
+</br>
+</div>
+<!----------------------------------->
+<div id="Series" class="tabcontent">
+	<h3>
+	</h3>
+	<p>		
+		
+	</p>
+</br>
+</div>
+<!------------# End tutorial----------------------->
+
+
+
+
+
+<!-------Part DateTime ----------------->
+
 <!----------------------------------->
 <div id="epoch" class="tabcontent">
 	<h3>
@@ -2010,6 +2150,8 @@ It's nearly impossible to know what timezone the timestamps are in otherwise: UT
 </br>
 </div>
 <!----------------------------------->
+<!-------End Part DateTime ----------------->
+
 
 </body>
 </html>
