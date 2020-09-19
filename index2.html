@@ -2298,6 +2298,217 @@ with open(
 </div>
 <!----------------------------------->
 <!------- End Part Indicator ----------------->
+<!----------------------------------->
+
+<!----------------------------------->
+<!------- Start Part Order ----------------->
+<!----------------------------------->
+
+<div id="Order" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="Limit" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="LimitSell" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="LimitBuy" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="Market" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="MarketSell" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="MarketBuy" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="TestOrder" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="GetOrder" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="GetAllOrder" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="CancelOrder" class="tabcontent">
+	<h3>
+		
+	</h3>
+	<p>
+	</p>
+</div>
+<!----------------------------------->
+<div id="GetOpenOrder" class="tabcontent">
+	<h3>
+		دریافت سفارش ها یا اوردر های باز در بایننس با زبان پایتون
+	</h3>
+	<p>
+	 def get_open_orders(self, **params):</br>
+	 <div class="space">
+		<div class="text-info">
+        """Get all open orders on a symbol.</br>
+</br>        
+        :param symbol: optional</br>
+        :type symbol: str</br>
+        :param recvWindow: the number of milliseconds the request is valid for</br>
+        :type recvWindow: int</br>
+</br>
+        :returns: API response</br>
+</br>
+        .. code-block:: python</br>
+</br>
+            [</br>
+                {</br>
+                    "symbol": "LTCBTC",</br>
+                    "orderId": 1,</br>
+                    "clientOrderId": "myOrder1",</br>
+                    "price": "0.1",</br>
+                    "origQty": "1.0",</br>
+                    "executedQty": "0.0",</br>
+                    "status": "NEW",</br>
+                    "timeInForce": "GTC",</br>
+                    "type": "LIMIT",</br>
+                    "side": "BUY",</br>
+                    "stopPrice": "0.0",</br>
+                    "icebergQty": "0.0",</br>
+                    "time": 1499827319559</br>
+                }</br>
+            ]</br>
+</br>
+        :raises: BinanceResponseException, BinanceAPIException</br>
+</br>
+        """</br>
+		</div>
+        return self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'get')">_get('openOrders', True, data=params)</button></br>
+		</div>
+	
+	</p>
+</div>
+<!----------------------------------->
+<div id="GetOrderBook" class="tabcontent">
+	<h3>
+		دریافت  کتاب سفارش ها یا اوردربوک از بایننس با زبان پایتون
+	</h3>
+	<p>
+	def get_order_book(self, **params):</br>
+	<div class="space">
+		<div class="text-info">
+        """Get the Order Book for the market</br>
+
+</br>
+        :param symbol: required</br>
+        :type symbol: str</br>
+        :param limit:  Default 100; max 100</br>
+        :type limit: int</br>
+</br>
+        :returns: API response</br>
+</br>
+        .. code-block:: python</br>
+
+            {</br>
+            }</br>
+</br>
+        :raises: BinanceResponseException, BinanceAPIException</br>
+</br>
+        """</br>
+		</div>
+        return self.<button style="background-color:white;border:0px white solid;font-weight:bold;" class="tablinks" onclick="openCity(event, 'get')">_get('depth', data=params)</button></br>
+       </div>
+	</p>
+</div>
+<!----------------------------------->
+<div id="ConstOrder" class="tabcontent">
+	<h3>
+		ثابت های استفاده شده در بخش سفارش ها یا اوردر بایننس برای برنامه نویسی 
+	</h3>
+	<p>
+	</br>
+	ORDER_STATUS_NEW =<div class="text-info"> 'NEW'</div></br>
+    ORDER_STATUS_PARTIALLY_FILLED =<div class="text-info"> 'PARTIALLY_FILLED'</div></br>
+    ORDER_STATUS_FILLED =<div class="text-info"> 'FILLED'</div></br>
+    ORDER_STATUS_CANCELED =<div class="text-info"> 'CANCELED'</div></br>
+    ORDER_STATUS_PENDING_CANCEL =<div class="text-info"> 'PENDING_CANCEL'</div></br>
+    ORDER_STATUS_REJECTED =<div class="text-info"> 'REJECTED'</div></br>
+    ORDER_STATUS_EXPIRED = <div class="text-info">'EXPIRED'</div></br>
+	</br>
+	</br>
+	 ORDER_TYPE_LIMIT =<div class="text-info"> 'LIMIT'</div></br>
+    ORDER_TYPE_MARKET = <div class="text-info">'MARKET'</div></br>
+    ORDER_TYPE_STOP_LOSS = <div class="text-info">'STOP_LOSS'</div></br>
+    ORDER_TYPE_STOP_LOSS_LIMIT = <div class="text-info">'STOP_LOSS_LIMIT'</div></br>
+    ORDER_TYPE_TAKE_PROFIT =<div class="text-info"> 'TAKE_PROFIT'</div></br>
+    ORDER_TYPE_TAKE_PROFIT_LIMIT = <div class="text-info">'TAKE_PROFIT_LIMIT'</div></br>
+    ORDER_TYPE_LIMIT_MAKER = <div class="text-info">'LIMIT_MAKER'</div></br>
+	</br>
+	</br>
+    ORDER_RESP_TYPE_ACK =<div class="text-info"> 'ACK'</div></br>
+    ORDER_RESP_TYPE_RESULT = <div class="text-info">'RESULT'</div></br>
+    ORDER_RESP_TYPE_FULL = <div class="text-info">'FULL'</div></br>
+	</br>
+	</p>
+</div>
+
+
+
+<!----------------------------------->
+<!------- End Part Indicator ----------------->
+<!----------------------------------->
+
+
 <!-------Part tutorial Python----------------->
 <div id="PythonTu" class="tabcontent">
 	<h3>
