@@ -84,5 +84,31 @@
 		width:800px;
 		border:3px solid black;
 	}
+
 	
 	
+.Navbar__Link-toggle {
+  display: none;
+}
+	
+	
+@media only screen and (max-width: 768px) {
+  .tab
+   {
+    flex-direction: column;
+	display:none;
+  }
+  .Navbar__ToggleShow {
+    display: flex;
+  }
+    
+.Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+   } 
+ .tabcontent{
+  font-size:10px;
+  }
+  }
