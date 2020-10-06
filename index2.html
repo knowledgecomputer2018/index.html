@@ -33,6 +33,10 @@
 <div class="container" style="direction:rtl">
 	<div class="row">
 		<div class="col-sm-4" style="direction:rtl">
+<div class="Navbar__Link Navbar__Link-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
 <div class="tab">
 
   <button class="tablinks" style="font-weight:bold" onclick="openCity(event, 'Binance')">بایننس</button>
@@ -3395,6 +3399,14 @@ with open(
 
 
 
+<!--
+<script>
+if(body.onresize("smal")){
+	tablinks = document.getElementsByClassName("tablinks");
+	tablinks.style.display = "none";
+}
+</script>
+  -->
   <script >
   function openCity(evt, Name) {
   // Declare all variables
@@ -3418,7 +3430,15 @@ evt.currentTarget.className += " active";
 
 }
   </script>
+ <script>
+ function classToggle() {
+  const navs = document.querySelectorAll('.tab')
+  
+  navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+}
 
+document.querySelector('.Navbar__Link-toggle').addEventListener('click', classToggle);
+</script
   
   
   
